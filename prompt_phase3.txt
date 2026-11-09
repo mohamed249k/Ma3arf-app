@@ -1,0 +1,727 @@
+<USER_REQUEST>
+# ULTRA PRO MAX MASTER PROMPT
+
+## Ma3arf — Phase 3: Final 250 Verified Islamic Questions
+
+### Flutter Mobile App — Complete the 500-Question Expansion Target with Strict Religious Accuracy & Source Verification
+
+You are continuing development of the **EXISTING Ma3arf Flutter Mobile Application**.
+
+Project reference:
+https://mohamed249k.github.io/Ma3arf/
+
+**IMPORTANT:** The link above is provided as a reference to the existing Ma3arf project and its content. Your implementation target is the existing Flutter mobile application in the currently opened workspace.
+
+This is the **SECOND and FINAL batch** of the planned 500 additional Islamic questions.
+
+Your task is to add exactly **250 NEW, independently verified Islamic questions** to the existing Flutter application's question bank, bringing the total expansion target to 500 additional questions across the eight specified categories.
+
+This is a highly sensitive religious-content task.
+
+**Religious accuracy, authenticity, and source traceability are absolute requirements. A single fabricated, misleading, incorrectly attributed, or inadequately verified question is unacceptable.**
+
+Do not prioritize speed or quantity over correctness.
+
+Do not generate questions from memory alone. Do not assume that an AI-generated answer is correct. Every question must be checked against a reliable source that directly supports its content.
+
+You must inspect the existing Flutter project, audit its actual question bank, implement the questions in its real data structure, test the application, and deliver a verified final report.
+
+**This is a direct implementation task, not a planning exercise.**
+
+---
+
+# 1. FIRST: AUDIT THE EXISTING QUESTION BANK
+
+Before writing or adding anything, inspect the actual question bank used by the Flutter application and establish its current state.
+
+The previous implementation phase was intended to add the first 250 new questions.
+
+You must now determine:
+
+1. The original question-bank count before the 500-question expansion, if this information can be established from the project or its records.
+2. The number of questions currently present in the Flutter application.
+3. The number of additional questions introduced in the previous phase.
+4. The number of valid, unique, and usable questions from that first batch.
+5. The current distribution across the eight target categories.
+6. Whether any questions are duplicated, incorrectly categorized, missing references, or structurally invalid.
+7. How the existing Flutter application loads, stores, filters, and displays its questions.
+
+Inspect all relevant Dart files, model classes, repositories, local JSON files, assets, and any other data sources actually used by the application.
+
+Do not blindly assume that the first batch contains exactly 250 valid questions. Audit the actual data.
+
+If any previously added questions are duplicates, unsupported, inaccurate, or invalid, identify them and handle them carefully.
+
+Do not silently delete or modify existing content.
+
+Any correction or replacement must be documented.
+
+### Important distinction
+
+The target of this project is:
+
+* 500 additional questions in total across both expansion phases.
+* 250 additional questions from the previous phase.
+* 250 additional questions in this phase.
+
+The target is NOT simply to make the entire application's question bank contain 500 questions.
+
+Preserve all original questions.
+
+---
+
+# 2. FINAL REQUIRED CATEGORY DISTRIBUTION — EXACTLY 500 ADDITIONAL QUESTIONS
+
+The final distribution of the 500 additional questions must match this table exactly.
+
+| Category                  | Final Target |
+| ------------------------- | -----------: |
+| القرآن الكريم وعلومه      |           80 |
+| السيرة النبوية            |           80 |
+| الأنبياء والرسل           |           60 |
+| الحديث النبوي             |           60 |
+| العبادات والفقه الأساسي   |           80 |
+| العقيدة                   |           60 |
+| التاريخ الإسلامي          |           50 |
+| الآداب والأخلاق الإسلامية |           30 |
+| **TOTAL**                 |      **500** |
+
+These are the final cumulative targets across both phases, not the number to add in this phase.
+
+### 2.1 Calculate the remaining questions per category
+
+Before creating the new batch, compare the actual number of valid questions already added in Phase 2 against each category's target.
+
+Use this calculation for every category:
+
+`Remaining Questions = Final Category Target - Valid Existing Expansion Questions in That Category`
+
+The resulting remaining quantities must add up to exactly 250.
+
+Do not assume every category needs the same number of new questions.
+
+Do not use the previous phase's intended distribution as proof that its questions were actually implemented correctly.
+
+### 2.2 Category balancing rules
+
+* Add questions only to categories that still have a deficit.
+* Do not exceed the target of any category.
+* Do not add unnecessary questions to categories that have already reached their targets.
+* If a previously added question is invalid and must be replaced, document the correction and ensure the final valid count remains accurate.
+* Keep the original pre-expansion questions separate from the 500 additional questions when calculating the expansion totals.
+
+### 2.3 Final distribution requirement
+
+At the end of this phase:
+
+* All eight categories must reach their exact targets.
+* The total number of valid additional questions across both phases must equal exactly 500.
+* No category may be above or below its specified target.
+
+If the existing data does not permit a reliable calculation, stop and report the discrepancy before making irreversible changes. Do not guess.
+
+---
+
+# 3. ABSOLUTE PRIORITY: RELIGIOUS AUTHENTICITY AND ACCURACY
+
+This section overrides all other requirements.
+
+These questions will be presented to users as Islamic educational content. Incorrect religious information could mislead people.
+
+**Treat every question as a religious fact that requires evidence.**
+
+### 3.1 Required verification process
+
+For every new question, independently verify:
+
+1. The question itself is factually correct.
+2. The proposed correct answer is unquestionably supported by the source.
+3. The source actually supports the exact claim being made.
+4. The question does not contain an incorrect assumption.
+5. The distractors are genuinely incorrect in the context of the question.
+6. There is only one defensible correct answer.
+7. The wording does not turn a scholarly disagreement into an absolute fact.
+8. Any quoted or attributed religious text is accurate.
+9. The reference details are correct and traceable.
+
+A source that discusses a similar topic is not sufficient. It must support the actual question and its answer.
+
+### 3.2 Source hierarchy
+
+Prefer primary and highly reliable sources.
+
+**For Quran-related questions:**
+
+* The Holy Quran itself.
+* Reliable Quranic text databases.
+* Recognized Tafsir references.
+* Established scholarly sources for Quranic sciences.
+
+Provide precise Surah and verse references whenever relevant.
+
+**For Hadith-related questions:**
+
+* Sahih al-Bukhari.
+* Sahih Muslim.
+* Other recognized Hadith collections when appropriate.
+* Reliable Hadith databases that provide the original text, collection, reference number, and grading where applicable.
+* Recognized scholarly Hadith grading references.
+
+For every Hadith-based question, verify the narration and its attribution.
+
+Do not automatically describe every narration in a Hadith collection as authentic without considering the collection and scholarly context.
+
+Never invent a Hadith number or grading.
+
+**For Seerah and the Prophets:**
+
+* Recognized Seerah references.
+* Reliable classical Islamic sources.
+* Quranic evidence where applicable.
+* Reliable scholarly references for historical details and narrations.
+
+Distinguish between what is explicitly established in the Quran or authentic Sunnah and what is reported in historical literature.
+
+Do not present weak historical reports as certain facts.
+
+**For Fiqh and worship:**
+
+* Recognized scholarly references.
+* Reliable institutional Fatwa sources.
+* Established evidence from the Quran and authentic Sunnah.
+* Clearly identified scholarly positions where differences exist.
+
+Do not turn a disputed fiqh issue into a universal answer.
+
+**For Aqeedah:**
+
+* Clear Quranic and authentic Sunnah evidence.
+* Recognized foundational references.
+* Carefully worded questions that avoid sectarian disputes or ambiguous theological claims.
+
+**For Islamic history and ethics:**
+
+* Reliable historical and scholarly references.
+* Primary textual evidence whenever possible.
+* Recognized references for historical events, personalities, and established Islamic teachings.
+
+### 3.3 Prohibited sources and practices
+
+Never use the following as the sole basis for a religious question:
+
+* Unverified social media posts.
+* Random blogs.
+* Anonymous websites.
+* AI-generated religious answers.
+* Unsourced educational websites.
+* Search snippets without opening and checking the underlying source.
+* Unverified quotations copied between websites.
+
+Do not fabricate citations, URLs, source names, page numbers, Hadith numbers, or verse references.
+
+Do not cite a website merely because it looks Islamic.
+
+Actually inspect the source and confirm the relevant information.
+
+### 3.4 Handling scholarly disagreements
+
+Some Islamic subjects contain recognized differences among scholars.
+
+For these subjects:
+
+* Avoid ambiguous questions.
+* Avoid declaring one disputed position to be the only correct Islamic answer.
+* If a question specifically concerns a recognized scholarly position, identify the school, scholar, or context accurately.
+* Prefer broadly established facts suitable for a general Islamic knowledge quiz.
+* Exclude questions that cannot be phrased without misleading the user.
+
+If reliable sources disagree about a detail, do not guess. Replace the question with an uncontroversial, verifiable one.
+
+### 3.5 Mandatory rejection rule
+
+If you cannot verify a question confidently from a reliable source, reject it.
+
+Replace it with another question that can be fully verified.
+
+Do not lower verification standards to complete the target.
+
+The final target of 250 new questions must consist of 250 valid questions, not 250 generated entries containing uncertain material.
+
+---
+
+# 4. QUESTION QUALITY AND EDUCATIONAL VALUE
+
+The second batch must maintain the same quality standards as the first batch while introducing genuinely new content.
+
+Every question must:
+
+* Be written in clear, natural Arabic.
+* Be understandable to the intended general audience.
+* Have one unambiguously correct answer.
+* Include plausible but clearly incorrect alternatives.
+* Avoid trick questions and misleading wording.
+* Avoid unnecessary complexity.
+* Avoid repeating information already tested by another question.
+* Have educational value.
+* Match its assigned category.
+* Use consistent terminology and spelling.
+
+### 4.1 Avoid superficial variations
+
+Do not consider two questions unique simply because their wording differs.
+
+For example, asking the same fact using two different sentence structures is still a duplicate.
+
+Compare the underlying knowledge being tested, not only the exact text.
+
+Check for semantic duplication across:
+
+* The original question bank.
+* The first 250-question expansion.
+* The new 250-question batch.
+
+### 4.2 Difficulty distribution
+
+If the current Flutter application supports difficulty levels, use a balanced mix of:
+
+* Easy
+* Medium
+* Hard
+
+Do not make the questions unnecessarily difficult simply to increase variety.
+
+Difficulty should reflect the knowledge required, not confusing wording.
+
+### 4.3 Answer explanations
+
+If the current system supports explanations, include a short, accurate Arabic explanation for each new question.
+
+The explanation should:
+
+* Clarify the correct answer.
+* Add useful educational context.
+* Avoid unsupported details.
+* Remain consistent with the cited source.
+
+Do not add explanations that introduce claims not supported by the references.
+
+---
+
+# 5. SOURCE METADATA — EVERY QUESTION MUST BE TRACEABLE
+
+Every new question must contain sufficient source metadata using the existing Flutter project schema or compatible fields.
+
+Where supported, include:
+
+* `sourceName`
+* `sourceReference`
+* `sourceUrl`
+* `verificationStatus`
+* `category`
+* `difficulty`
+* `explanation`
+
+Adapt the field names to the existing Dart model and project conventions rather than introducing incompatible properties.
+
+### Source metadata requirements
+
+**Quran:**
+
+* Surah name.
+* Verse number.
+* Reliable reference or URL.
+
+**Hadith:**
+
+* Collection name.
+* Hadith number or precise reference.
+* Authenticity grading where applicable.
+* Reliable source URL.
+
+**Fiqh:**
+
+* Recognized scholarly or institutional reference.
+* The relevant position or evidence.
+* A precise reference where available.
+
+**Seerah, Prophets, and History:**
+
+* Reliable book, scholarly reference, or institutional source.
+* Page, chapter, section, or other precise reference where possible.
+
+**Aqeedah and Ethics:**
+
+* Relevant Quranic verse, authentic Hadith, or recognized scholarly reference.
+
+Do not invent missing metadata.
+
+A question without adequate source verification must not be marked as verified.
+
+### Verification status
+
+If the system supports review states, distinguish clearly between:
+
+* Verified
+* Needs review
+* Rejected
+
+Only genuinely checked questions may be marked `Verified`.
+
+The 250 questions included in the production quiz bank must all meet the verification standard.
+
+---
+
+# 6. IMPLEMENTATION: INTEGRATE THE 250 QUESTIONS INTO THE EXISTING FLUTTER APPLICATION
+
+Once the new questions have passed verification, integrate them into the existing Flutter question bank.
+
+### 6.1 Flutter-specific implementation requirements
+
+* Work inside the existing Flutter project.
+* Follow the actual existing Dart question model and data schema.
+* Preserve the existing architecture and project structure.
+* Preserve unique question IDs.
+* Preserve the existing category structure.
+* Maintain Arabic RTL presentation.
+* Maintain compatibility with the existing quiz engine.
+* Maintain compatibility with random question selection.
+* Maintain compatibility with category filters.
+* Maintain compatibility with difficulty filters, if available.
+* Maintain correct answer evaluation.
+* Maintain score calculation.
+* Maintain answer review.
+* Preserve source metadata.
+* Preserve existing question ordering or loading behavior.
+* Ensure the new questions are included in the data source actually consumed by the application.
+
+### 6.2 Data integration
+
+Inspect how the existing Flutter application stores and loads questions before deciding where to integrate the new entries.
+
+Depending on the existing architecture, this may involve:
+
+* Dart model classes.
+* Static Dart question lists.
+* Local JSON assets.
+* Asset-loading services.
+* Repositories or data providers.
+* Local databases or persistent storage.
+* Existing state-management solutions.
+
+Use the existing architecture instead of introducing a competing system.
+
+If the application uses JSON assets, update the correct asset files and verify their registration in `pubspec.yaml` when necessary.
+
+If the application uses Dart data files, integrate the questions into the actual data source used by the quiz engine.
+
+If the application uses local persistence, ensure the new questions are available without destroying or overwriting existing user data.
+
+### 6.3 Preserve the existing mobile experience
+
+Do not redesign the entire application unnecessarily.
+
+Preserve:
+
+* Existing screens and navigation.
+* Existing quiz flow.
+* Existing category-selection experience.
+* Existing question presentation.
+* Existing answer-selection interactions.
+* Existing score and results screens.
+* Existing settings and user preferences.
+* Existing animations and visual identity.
+* Existing Arabic typography and RTL behavior.
+* Existing responsive behavior across different mobile screen sizes.
+
+The new content must feel like a natural extension of the existing Ma3arf mobile application.
+
+### 6.4 Important restrictions
+
+* Do not create a second independent question bank.
+* Do not bypass the existing quiz engine.
+* Do not create a separate Flutter application.
+* Do not replace the existing architecture without a compelling technical reason.
+* Do not remove existing features.
+* Do not overwrite existing user progress or saved data.
+* Do not add questions that exist in source files but are not actually loaded by the application.
+* Do not introduce unnecessary dependencies.
+* Do not modify unrelated screens or features.
+
+The new questions must be accessible through the normal Flutter application experience.
+
+---
+
+# 7. DATA INTEGRITY AND AUTOMATED VALIDATION
+
+Build or use a validation process to check the complete question bank.
+
+At minimum, validate:
+
+1. Exactly 250 new valid questions are introduced in this phase.
+2. All question IDs are unique.
+3. All answer structures are valid.
+4. Every correct answer maps to an existing option.
+5. Every question has a valid category.
+6. Every required source field is populated.
+7. No question is semantically duplicated.
+8. No category exceeds its final target.
+9. No existing original question is lost.
+10. No invalid placeholder questions are included.
+11. All new questions are included in the actual data source loaded by the Flutter application.
+12. No malformed JSON or invalid Dart data structures are introduced.
+13. All question models can correctly parse the new entries.
+14. Source metadata is preserved during loading and serialization, where applicable.
+
+If practical, create or update an automated validation script that checks:
+
+* Total question counts.
+* Phase-specific question counts.
+* Category counts.
+* Unique IDs.
+* Required metadata.
+* Correct-answer references.
+* Data structure integrity.
+* Duplicate candidates.
+
+Use Dart tests or other appropriate project-native validation methods where possible.
+
+Automated checks are useful but cannot replace manual religious verification.
+
+A script cannot prove that a Hadith is authentic or that a religious answer is correct.
+
+**Manual source verification remains mandatory.**
+
+---
+
+# 8. FLUTTER TESTING AND REGRESSION TESTING
+
+After adding the questions, test the actual Flutter application.
+
+Do not stop after editing the files.
+
+Run the appropriate Flutter commands from the existing project directory.
+
+At minimum, perform:
+
+### 8.1 Static analysis
+
+Run:
+
+`flutter analyze`
+
+Resolve all new errors and warnings introduced by your changes.
+
+Do not hide errors by disabling analysis rules or suppressing warnings without a valid reason.
+
+### 8.2 Automated tests
+
+Run:
+
+`flutter test`
+
+Add or update tests when necessary to validate the question bank and quiz behavior.
+
+Verify:
+
+* Question models parse the new data correctly.
+* Question IDs remain unique.
+* Category totals are correct.
+* Required source metadata exists.
+* Correct answers map to valid options.
+* The quiz engine can load the expanded question bank.
+* Existing quiz logic remains functional.
+
+### 8.3 Application build
+
+Run an appropriate Flutter build command for the existing project.
+
+At minimum, attempt:
+
+`flutter build apk --debug`
+
+If the environment and project configuration support it, also verify a release build:
+
+`flutter build apk --release`
+
+Do not claim a successful build unless the command actually completes successfully.
+
+If a build fails because of an unrelated pre-existing environment issue, identify the exact error and distinguish it from issues caused by your implementation.
+
+### 8.4 Actual application behavior
+
+Test the actual mobile application, using an available Android emulator or connected device when possible.
+
+Verify:
+
+* Questions load successfully.
+* All eight categories work correctly.
+* Category selection returns questions from the correct category.
+* Random question selection works.
+* No question appears with missing text or options.
+* Correct answers are evaluated correctly.
+* Incorrect answers are evaluated correctly.
+* Scores remain accurate.
+* Answer review displays the correct answer.
+* Explanations appear correctly, if supported.
+* Arabic text displays correctly.
+* RTL layout remains intact.
+* Long Arabic questions do not break the mobile layout.
+* Answer options remain readable and selectable.
+* Scrolling and navigation work correctly.
+* Existing features continue working.
+* No Flutter runtime exceptions occur.
+* No broken asset or data imports occur.
+
+### 8.5 Different screen sizes
+
+Check the mobile experience on different screen sizes and orientations where supported.
+
+Ensure the new content does not cause:
+
+* RenderFlex overflow errors.
+* Text clipping.
+* Overlapping answer options.
+* Unreadable Arabic text.
+* Broken scrolling.
+* Misaligned RTL elements.
+
+Fix all issues discovered before completing the task.
+
+---
+
+# 9. FINAL ACCEPTANCE CRITERIA
+
+This phase is complete only when all the following conditions are met:
+
+* Exactly 250 new questions have been added in this phase.
+* The total expansion across both phases equals exactly 500 valid questions.
+* All eight category targets are reached exactly.
+* All 250 new questions have been individually checked against reliable sources.
+* No fabricated or untraceable references exist.
+* No semantic duplicates have been introduced.
+* All questions work inside the actual Flutter application.
+* The existing question bank and quiz engine remain intact.
+* Existing content and functionality remain intact.
+* Source metadata is preserved and accessible.
+* Flutter analysis and relevant tests have been performed.
+* The application builds successfully, or any environment-related build limitation is clearly documented.
+* Actual mobile behavior has been tested where the available environment permits.
+
+If any criterion cannot be met, do not falsely report completion.
+
+---
+
+# 10. FINAL DELIVERY REPORT
+
+After implementation, provide a detailed but clear report.
+
+Include the following:
+
+### A. Question bank statistics
+
+| Metric                              |       Result |
+| ----------------------------------- | -----------: |
+| Original questions before expansion | Actual count |
+| Valid questions from Phase 2        | Actual count |
+| New questions added in Phase 3      |          250 |
+| Total additional questions          |          500 |
+| Final total question-bank count     | Actual count |
+
+### B. Final category distribution
+
+| Category                  |  Target |     Actual | Status           |
+| ------------------------- | ------: | ---------: | ---------------- |
+| القرآن الكريم وعلومه      |      80 |     Actual | Verified         |
+| السيرة النبوية            |      80 |     Actual | Verified         |
+| الأنبياء والرسل           |      60 |     Actual | Verified         |
+| الحديث النبوي             |      60 |     Actual | Verified         |
+| العبادات والفقه الأساسي   |      80 |     Actual | Verified         |
+| العقيدة                   |      60 |     Actual | Verified         |
+| التاريخ الإسلامي          |      50 |     Actual | Verified         |
+| الآداب والأخلاق الإسلامية |      30 |     Actual | Verified         |
+| **TOTAL**                 | **500** | **Actual** | **Final status** |
+
+### C. Religious verification report
+
+Explain:
+
+* What types of sources were used.
+* How the references were checked.
+* How Hadith references and gradings were verified.
+* Whether any questions were rejected or replaced.
+* Whether any remaining scholarly disagreements required exclusion.
+* How semantic duplicates were identified and handled.
+
+Do not claim that all questions were individually verified unless that verification was actually completed.
+
+### D. Flutter technical report
+
+List:
+
+* Dart files modified.
+* JSON or other data files modified.
+* Model classes updated, if any.
+* Repositories or data-loading services updated, if any.
+* Assets or `pubspec.yaml` changes, if any.
+* Validation scripts created or updated.
+* Tests created or updated.
+* Flutter commands executed.
+* Actual `flutter analyze` results.
+* Actual `flutter test` results.
+* Actual APK build results.
+* Whether the application was tested on an emulator or physical device.
+* Any remaining limitations.
+
+### E. Final project status
+
+Clearly state whether the project is:
+
+* Fully completed and verified.
+* Implemented but partially verified.
+* Blocked by a specific issue.
+
+Do not fabricate statistics or mark unperformed checks as successful.
+
+---
+
+# FINAL NON-NEGOTIABLE INSTRUCTION
+
+This is the final 250-question batch of the planned 500-question expansion.
+
+The required final distribution is:
+
+* القرآن الكريم وعلومه: 80
+* السيرة النبوية: 80
+* الأنبياء والرسل: 60
+* الحديث النبوي: 60
+* العبادات والفقه الأساسي: 80
+* العقيدة: 60
+* التاريخ الإسلامي: 50
+* الآداب والأخلاق الإسلامية: 30
+
+**Total: EXACTLY 500 additional verified questions across both phases.**
+
+Do not add a third batch.
+
+Do not exceed the category targets.
+
+Do not sacrifice accuracy to meet the numbers.
+
+Do not rely on AI-generated religious claims without source verification.
+
+Do not fabricate sources or references.
+
+Do not treat automated validation as proof of religious authenticity.
+
+If a question is uncertain, reject it and replace it with a properly verified question.
+
+**The integrity of the Islamic content is more important than completion speed, question count, or the appearance of progress.**
+
+Work directly on the existing Flutter mobile project. Preserve its architecture, existing features, user data, and visual identity.
+
+I expect a fully implemented, carefully audited, tested, and production-ready Flutter mobile application — not a plan, not a prototype, and not an unsupported claim of completion.
+
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-11-01T01:02:44+02:00.
+</ADDITIONAL_METADATA>

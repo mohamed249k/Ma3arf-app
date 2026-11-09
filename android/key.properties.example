@@ -1,0 +1,7 @@
+# Example key.properties for Ma3arf release signing
+# Copy this file to android/key.properties and replace with your production signing credentials.
+# Do NOT commit key.properties or .jks files to version control!
+storePassword=your_keystore_password
+keyPassword=your_key_password
+keyAlias=your_key_alias
+storeFile=your_keystore_file.jks

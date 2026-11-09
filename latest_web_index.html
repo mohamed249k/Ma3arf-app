@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مَعارِف | Ma3arf — منصة المسابقات والتعلم الإسلامي الموثوقة وفق القرآن الكريم والسنة النبوية والتاريخ الإسلامي">
+    <meta name="theme-color" content="#0B1512">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>مَعارِف | Ma3arf — رحلة التعلم الإسلامي الموثق</title>
+    
+    <!-- Google Fonts (Cairo, Tajawal, Amiri) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Main Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Patterns & Particle Overlays -->
+    <div class="islamic-pattern-bg" aria-hidden="true"></div>
+    <div id="particles-container" class="particles-container" aria-hidden="true"></div>
+    <div class="glow-orb orb-1" aria-hidden="true"></div>
+    <div class="glow-orb orb-2" aria-hidden="true"></div>
+
+    <!-- Header Section -->
+    <header class="app-header">
+        <div class="header-container">
+            <div class="header-right">
+                <div class="logo" role="banner">
+                    <span class="logo-icon" aria-hidden="true"><svg class="ph-duotone ph-mosque icon-gold" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" ><path d="M208,128H48c0-64,80-72,80-104C128,56,208,64,208,128Z" opacity="0.2"/><path d="M224,128a23.84,23.84,0,0,0-8,1.38V128c0-41.78-31.07-62.46-53.76-77.56C148.16,41.06,136,33,136,24a8,8,0,0,0-16,0c0,9-12.16,17.06-26.24,26.44C71.07,65.54,40,86.22,40,128v1.38A24,24,0,0,0,8,152v56a8,8,0,0,0,8,8H80a8,8,0,0,0,8-8V176a8,8,0,0,1,16,0v32a8,8,0,0,0,8,8h32a8,8,0,0,0,8-8V176a8,8,0,0,1,16,0v32a8,8,0,0,0,8,8h64a8,8,0,0,0,8-8V152A24,24,0,0,0,224,128ZM40,200H24V152a8,8,0,0,1,16,0ZM102.63,63.76c9.67-6.44,19-12.68,25.37-20,6.34,7.35,15.7,13.59,25.37,20,20,13.32,42.48,28.29,46.11,56.24h-143C60.15,92.05,82.6,77.08,102.63,63.76ZM200,200H184V176a24,24,0,0,0-48,0v24H120V176a24,24,0,0,0-48,0v24H56V136H200Zm32,0H216V152a8,8,0,0,1,16,0Z"/></svg></span>
+                    <div class="logo-text-group">
+                        <h1 class="logo-text">مَعارِف</h1>
+                        <span class="logo-subtext">Ma3arf</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="header-center">
+                <!-- User XP Progress Indicator -->
+                <div class="xp-badge-container" id="header-xp-container" title="نقاط الخبرة الإجمالية والمستوى المعرفي">
+                    <div class="level-icon" id="user-level-badge" aria-label="رتبة المستوى"><svg class="ph-duotone ph-plant icon-gold" viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true" ><path d="M138.54,149.46C106.62,96.25,149.18,43.05,239.63,48.37,245,138.82,191.75,181.39,138.54,149.46ZM16.26,88.26c-3.8,64.61,34.21,95,72.21,72.21C111.27,122.47,80.87,84.46,16.26,88.26Z" opacity="0.2"/><path d="M247.63,47.89a8,8,0,0,0-7.52-7.52c-51.76-3-93.32,12.74-111.18,42.22-11.8,19.48-11.78,43.16-.16,65.74a71.37,71.37,0,0,0-14.17,26.95L98.33,159c7.82-16.33,7.52-33.36-1-47.49C84.09,89.73,53.62,78,15.79,80.27a8,8,0,0,0-7.52,7.52c-2.23,37.83,9.46,68.3,31.25,81.5A45.82,45.82,0,0,0,63.44,176,54.58,54.58,0,0,0,87,170.33l25,25V224a8,8,0,0,0,16,0V194.51a55.61,55.61,0,0,1,12.27-35,73.91,73.91,0,0,0,33.31,8.4,60.9,60.9,0,0,0,31.83-8.86C234.89,141.21,250.67,99.65,247.63,47.89ZM86.06,146.74l-24.41-24.4a8,8,0,0,0-11.31,11.31l24.41,24.41c-9.61,3.18-18.93,2.39-26.94-2.46C32.47,146.31,23.79,124.32,24,96c28.31-.25,50.31,8.47,59.6,23.81C88.45,127.82,89.24,137.14,86.06,146.74Zm111.06-1.36c-13.4,8.11-29.15,8.73-45.15,2l53.69-53.7a8,8,0,0,0-11.31-11.32L140.65,136c-6.76-16-6.15-31.76,2-45.15,13.94-23,47-35.8,89.33-34.83C232.94,98.34,220.14,131.44,197.12,145.38Z"/></svg></div>
+                    <div class="xp-details">
+                        <div class="level-title-container">
+                            <span class="level-label">المستوى:</span>
+                            <span class="level-value" id="current-level-name">المبتدئ</span>
+                        </div>
+                        <div class="xp-progress-bar-wrapper">
+                            <div class="xp-progress-fill" id="xp-progress-fill" style="width: 0%;"></div>
+                        </div>
+                        <div class="xp-text-numbers">
+                            <span id="current-xp-val">0</span> / <span id="next-level-xp-val">100</span> XP
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-left">
+                <!-- Leaderboard Trigger Button -->
+                <button class="header-action-btn" id="open-leaderboard-header-btn" title="لوحة المتصدرين والتنافس" aria-label="لوحة المتصدرين">
+                    <span class="btn-icon" aria-hidden="true"><svg class="ph-duotone ph-trophy icon-gold" viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true" ><path d="M200,48v63.1c0,39.7-31.75,72.6-71.45,72.9A72,72,0,0,1,56,112V48Z" opacity="0.2"/><path d="M232,64H208V48a8,8,0,0,0-8-8H56a8,8,0,0,0-8,8V64H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8Zm144-8.9c0,35.52-29,64.64-64,64.9a64,64,0,0,1-64-64V56H192ZM232,96a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z"/></svg></span>
+                    <span>المتصدرون</span>
+                </button>
+
+                <!-- Statistics Trigger Button -->
+                <button class="header-action-btn" id="open-stats-btn" title="لوحة الإحصائيات والأوسمة" aria-label="لوحة الإحصائيات والأوسمة">
+                    <svg class="btn-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+                    </svg>
+                    <span>الإحصائيات</span>
+                </button>
+
+                <!-- Feedback / Suggestion Trigger Button -->
+                <button class="header-action-btn" id="open-feedback-header-btn" title="اقتراح سؤال أو إبلاغ عن ملاحظة" aria-label="اقتراح سؤال أو إبلاغ">
+                    <span class="btn-icon" aria-hidden="true"><svg class="ph-duotone ph-pencil-simple-line icon-gold" viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true" ><path d="M221.66,90.34,192,120,136,64l29.66-29.66a8,8,0,0,1,11.31,0L221.66,79A8,8,0,0,1,221.66,90.34Z" opacity="0.2"/><path d="M227.32,73.37,182.63,28.69a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H216a8,8,0,0,0,0-16H115.32l112-112A16,16,0,0,0,227.32,73.37ZM48,163.31l88-88L180.69,120l-88,88H48Zm144-54.62L147.32,64l24-24L216,84.69Z"/></svg></span>
+                    <span>ساهم معنا</span>
+                </button>
+
+                <!-- Sound FX Toggle Button -->
+                <button class="header-action-btn sound-toggle-btn" id="sound-toggle-btn" title="المؤثرات الصوتية: مفعّلة" aria-label="المؤثرات الصوتية">
+                    <span class="sound-icon-on" id="sound-icon-display" aria-hidden="true"><svg class="ph-duotone ph-speaker-high icon-gold" viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true" ><path d="M80,88v80H32a8,8,0,0,1-8-8V96a8,8,0,0,1,8-8Z" opacity="0.2"/><path d="M155.51,24.81a8,8,0,0,0-8.42.88L77.25,80H32A16,16,0,0,0,16,96v64a16,16,0,0,0,16,16H77.25l69.84,54.31A8,8,0,0,0,160,224V32A8,8,0,0,0,155.51,24.81ZM32,96H72v64H32ZM144,207.64,88,164.09V91.91l56-43.55Zm54-106.08a40,40,0,0,1,0,52.88,8,8,0,0,1-12-10.58,24,24,0,0,0,0-31.72,8,8,0,0,1,12-10.58ZM248,128a79.9,79.9,0,0,1-20.37,53.34,8,8,0,0,1-11.92-10.67,64,64,0,0,0,0-85.33,8,8,0,1,1,11.92-10.67A79.83,79.83,0,0,1,248,128Z"/></svg></span>
+                </button>
+
+                <!-- Theme Switcher Button -->
+                <button class="header-action-btn theme-toggle-btn" id="theme-toggle" title="تغيير المظهر (داكن / فاتح)" aria-label="تغيير المظهر">
+                    <svg class="ph-duotone ph-sun icon-gold sun-icon" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M184,128a56,56,0,1,1-56-56A56,56,0,0,1,184,128Z" opacity="0.2"/><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"/></svg>
+                    <svg class="ph-duotone ph-moon-stars icon-gold moon-icon" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M210.69,158.18A88,88,0,1,1,97.82,45.31,96.08,96.08,0,0,0,192,160,96.78,96.78,0,0,0,210.69,158.18Z" opacity="0.2"/><path d="M240,96a8,8,0,0,1-8,8H216v16a8,8,0,0,1-16,0V104H184a8,8,0,0,1,0-16h16V72a8,8,0,0,1,16,0V88h16A8,8,0,0,1,240,96ZM144,56h8v8a8,8,0,0,0,16,0V56h8a8,8,0,0,0,0-16h-8V32a8,8,0,0,0-16,0v8h-8a8,8,0,0,0,0,16Zm72.77,97a8,8,0,0,1,1.43,8A96,96,0,1,1,95.07,37.8a8,8,0,0,1,10.6,9.06A88.07,88.07,0,0,0,209.14,150.33,8,8,0,0,1,216.77,153Zm-19.39,14.88c-1.79.09-3.59.14-5.38.14A104.11,104.11,0,0,1,88,64c0-1.79,0-3.59.14-5.38A80,80,0,1,0,197.38,167.86Z"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Screens Wrapper -->
+    <main class="app-main-content">
+        <!-- 1. Landing Screen -->
+        <section id="screen-landing" class="app-screen active">
+            <div class="hero-section">
+                <!-- Islamic Star & Arch Motifs -->
+                <div class="hero-geometric-badge">
+                    <svg class="octagram-svg" viewBox="0 0 100 100" width="64" height="64" aria-hidden="true">
+                        <polygon points="50,5 64,36 95,50 64,64 50,95 36,64 5,50 36,36" fill="var(--color-primary-glow)" stroke="var(--color-secondary)" stroke-width="2"/>
+                        <circle cx="50" cy="50" r="16" fill="none" stroke="var(--color-secondary)" stroke-width="1.5" stroke-dasharray="3,3"/>
+                    </svg>
+                </div>
+                
+                <h2 class="hero-title animate-fade-in-up">رحلة التعلّم الإسلامي الرصين</h2>
+                <p class="hero-subtitle animate-fade-in-up delay-1">
+                    منصة تعليمية متخصصة تهدف إلى تثبيت المعارف والعلوم الشرعية بأدلتها الموثقة من القرآن الكريم والسنة النبوية المطهرة.
+                </p>
+
+                <!-- Daily Knowledge Card Preview (معلومة اليوم) -->
+                <div class="daily-fact-card-preview animate-fade-in-up delay-1" id="daily-fact-preview">
+                    <!-- Daily fact content injected by JS -->
+                </div>
+
+                <!-- Quick Stats Row -->
+                <div class="quick-stats-row animate-fade-in-up delay-2">
+                    <div class="quick-stat-card">
+                        <span class="qs-num" id="landing-total-quizzes">0</span>
+                        <span class="qs-label">الاختبارات المكتملة</span>
+                    </div>
+                    <div class="quick-stat-card">
+                        <span class="qs-num" id="landing-best-score">0%</span>
+                        <span class="qs-label">أعلى نتيجة محققة</span>
+                    </div>
+                </div>
+
+                <!-- Primary CTA -->
+                <div class="cta-actions animate-fade-in-up delay-3">
+                    <button class="btn btn-primary btn-lg pulse-glow" id="start-journey-btn">
+                        <span>ابدأ رحلة التعلم والاختبار</span>
+                        <svg class="arrow-svg" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                            <path fill="currentColor" d="M14 7l-5 5 5 5V7z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Quick Navigation Features Grid -->
+                <div class="landing-quick-nav-grid animate-fade-in-up delay-3">
+                    <div class="quick-nav-card" id="landing-card-daily" role="button" tabindex="0">
+                        <div class="nav-card-icon"><svg class="ph-duotone ph-lightning icon-gold" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" ><path d="M96,240l16-80L48,136,160,16,144,96l64,24Z" opacity="0.2"/><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg></div>
+                        <div class="nav-card-info">
+                            <h4>التحدي اليومي</h4>
+                            <p>10 أسئلة يومية منوعة تتجدد كل 24 ساعة</p>
+                        </div>
+                    </div>
+                    <div class="quick-nav-card" id="landing-card-learn" role="button" tabindex="0">
+                        <div class="nav-card-icon"><svg class="ph-duotone ph-book-open-text icon-gold" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" ><path d="M232,56V200H160a32,32,0,0,0-32,32V88a32,32,0,0,1,32-32Z" opacity="0.2"/><path d="M232,48H160a40,40,0,0,0-32,16A40,40,0,0,0,96,48H24a8,8,0,0,0-8,8V200a8,8,0,0,0,8,8H96a24,24,0,0,1,24,24,8,8,0,0,0,16,0,24,24,0,0,1,24-24h72a8,8,0,0,0,8-8V56A8,8,0,0,0,232,48ZM96,192H32V64H96a24,24,0,0,1,24,24V200A39.81,39.81,0,0,0,96,192Zm128,0H160a39.81,39.81,0,0,0-24,8V88a24,24,0,0,1,24-24h64ZM160,88h40a8,8,0,0,1,0,16H160a8,8,0,0,1,0-16Zm48,40a8,8,0,0,1-8,8H160a8,8,0,0,1,0-16h40A8,8,0,0,1,208,128Zm0,32a8,8,0,0,1-8,8H160a8,8,0,0,1,0-16h40A8,8,0,0,1,208,160Z"/></svg></div>
+                        <div class="nav-card-info">
+                            <h4>وضع التعلّم الهادئ</h4>
+                            <p>استكشاف الأسئلة بدون مؤقت مع شروحات فورية</p>
+                        </div>
+                    </div>
+                    <div class="quick-nav-card" id="landing-card-wrong" role="button" tabindex="0">
+                        <div class="nav-card-icon"><svg class="ph-duotone ph-arrow-counter-clockwise icon-gold" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" ><path d="M216,128a88,88,0,1,1-88-88A88,88,0,0,1,216,128Z" opacity="0.2"/><path d="M224,128a96,96,0,0,1-94.71,96H128A95.38,95.38,0,0,1,62.1,197.8a8,8,0,0,1,11-11.63A80,80,0,1,0,71.43,71.39a3.07,3.07,0,0,1-.26.25L44.59,96H72a8,8,0,0,1,0,16H24a8,8,0,0,1-8-8V56a8,8,0,0,1,16,0V85.8L60.25,60A96,96,0,0,1,224,128Z"/></svg></div>
+                        <div class="nav-card-info">
+                            <h4>مراجعة الأخطاء</h4>
+                            <p>أعد اختبار الأسئلة التي تعثرت فيها سابقاً</p>
+                        </div>
+                    </div>
+                    <div class="quick-nav-card" id="landing-card-favorites" role="button" tabindex="0">
+                        <div class="nav-card-icon"><svg class="ph-duotone ph-bookmark-simple icon-gold" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" ><path d="M192,48V224l-64-40L64,224V48a8,8,0,0,1,8-8H184A8,8,0,0,1,192,48Z" opacity="0.2"/><path d="M184,32H72A16,16,0,0,0,56,48V224a8,8,0,0,0,12.24,6.78L128,193.43l59.77,37.35A8,8,0,0,0,200,224V48A16,16,0,0,0,184,32Zm0,177.57-51.77-32.35a8,8,0,0,0-8.48,0L72,209.57V48H184Z"/></svg></div>
+                        <div class="nav-card-info">
+                            <h4>المفضلة المحفوظة</h4>
+                            <p>مراجعة واختبار الأسئلة التي قمت بحفظها</p>
+                        </div>
+                    </div>
+                    <div class="quick-nav-card" id="landing-card-search" role="button" tabindex="0">
+                        <div class="nav-card-icon"><svg class="ph-duotone ph-magnifying-glass icon-gold" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" ><path d="M192,112a80,80,0,1,1-80-80A80,80,0,0,1,192,112Z" opacity="0.2"/><path d="M229.66,218.34,179.6,168.28a88.21,88.21,0,1,0-11.32,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg></div>
+                        <div class="nav-card-info">
+                            <h4>بنك الأسئلة والبحث</h4>
+                            <p>ابحث في 800 سؤال موثق مع مراجعها الشرعية</p>
+                        </div>
+                    </div>
+                    <div class="quick-nav-card" id="landing-card-leaderboard" role="button" tabindex="0">
+                        <div class="nav-card-icon"><svg class="ph-duotone ph-trophy icon-gold" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" ><path d="M200,48v63.1c0,39.7-31.75,72.6-71.45,72.9A72,72,0,0,1,56,112V48Z" opacity="0.2"/><path d="M232,64H208V48a8,8,0,0,0-8-8H56a8,8,0,0,0-8,8V64H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8Zm144-8.9c0,35.52-29,64.64-64,64.9a64,64,0,0,1-64-64V56H192ZM232,96a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z"/></svg></div>
+                        <div class="nav-card-info">
+                            <h4>لوحة المتصدرين</h4>
+                            <p>أفضل النتائج والتنافس المعرفي بين الأصدقاء</p>
+                        </div>
+                    </div>
+                    <div class="quick-nav-card" id="landing-card-feedback" role="button" tabindex="0">
+                        <div class="nav-card-icon"><svg class="ph-duotone ph-pencil-simple-line icon-gold" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" ><path d="M221.66,90.34,192,120,136,64l29.66-29.66a8,8,0,0,1,11.31,0L221.66,79A8,8,0,0,1,221.66,90.34Z" opacity="0.2"/><path d="M227.32,73.37,182.63,28.69a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H216a8,8,0,0,0,0-16H115.32l112-112A16,16,0,0,0,227.32,73.37ZM48,163.31l88-88L180.69,120l-88,88H48Zm144-54.62L147.32,64l24-24L216,84.69Z"/></svg></div>
+                        <div class="nav-card-info">
+                            <h4>ساهم معنا</h4>
+                            <p>اقتراح سؤال جديد أو إبلاغ عن ملاحظة علمية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Settings & Mode Selection Screen -->
+        <section id="screen-selection" class="app-screen">
+            <div class="selection-container">
+                <button class="back-btn" id="selection-back-btn" aria-label="العودة للرئيسية">
+                    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                        <path fill="currentColor" d="M10 17l5-5-5-5v10z"/>
+                    </svg>
+                    <span>العودة للرئيسية</span>
+                </button>
+
+                <h2 class="section-title">تخصيص جلسة الاختبار والتعلم</h2>
+                <p class="section-subtitle">اختر بين نمط التحدي الزمني أو وضع التعلم الهادئ، وحدد درجة الصعوبة أو التصنيف المطلوب.</p>
+
+                <!-- Experience Mode Switcher (Learning vs Challenge) -->
+                <div class="mode-selection-section" id="mode-selection-section">
+                    <h3 class="subsection-title">١. نوع التجربة</h3>
+                    <div class="mode-toggle-group" role="radiogroup" aria-label="نوع التجربة">
+                        <button type="button" class="mode-toggle-btn active" id="mode-challenge-btn" role="radio" aria-checked="true">
+                            <span class="mode-icon"><svg class="ph-duotone ph-lightning icon-gold" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" ><path d="M96,240l16-80L48,136,160,16,144,96l64,24Z" opacity="0.2"/><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg></span>
+                            <div class="mode-text">
+                                <span class="mode-label">وضع التحدّي</span>
+                                <span class="mode-desc">مؤقت تنازلي، احتساب النقاط ومضاعفة نقاط الخبرة (XP)</span>
+                            </div>
+                        </button>
+                        <button type="button" class="mode-toggle-btn" id="mode-learning-btn" role="radio" aria-checked="false">
+                            <span class="mode-icon"><svg class="ph-duotone ph-book-open-text icon-gold" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" ><path d="M232,56V200H160a32,32,0,0,0-32,32V88a32,32,0,0,1,32-32Z" opacity="0.2"/><path d="M232,48H160a40,40,0,0,0-32,16A40,40,0,0,0,96,48H24a8,8,0,0,0-8,8V200a8,8,0,0,0,8,8H96a24,24,0,0,1,24,24,8,8,0,0,0,16,0,24,24,0,0,1,24-24h72a8,8,0,0,0,8-8V56A8,8,0,0,0,232,48ZM96,192H32V64H96a24,24,0,0,1,24,24V200A39.81,39.81,0,0,0,96,192Zm128,0H160a39.81,39.81,0,0,0-24,8V88a24,24,0,0,1,24-24h64ZM160,88h40a8,8,0,0,1,0,16H160a8,8,0,0,1,0-16Zm48,40a8,8,0,0,1-8,8H160a8,8,0,0,1,0-16h40A8,8,0,0,1,208,128Zm0,32a8,8,0,0,1-8,8H160a8,8,0,0,1,0-16h40A8,8,0,0,1,208,160Z"/></svg></span>
+                            <div class="mode-text">
+                                <span class="mode-label">وضع التعلّم</span>
+                                <span class="mode-desc">بدون مؤقت زمني، تدرج مريح مع شروحات علمية فورية</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Question Count Selector -->
+                <div class="question-count-section" id="question-count-section">
+                    <h3 class="subsection-title">٢. عدد الأسئلة للجلسة</h3>
+                    <div class="count-options-wrapper" id="question-count-selector" role="radiogroup" aria-label="عدد الأسئلة للجلسة">
+                        <button type="button" class="count-btn" data-count="5" role="radio" aria-checked="false">5 أسئلة</button>
+                        <button type="button" class="count-btn active" data-count="10" role="radio" aria-checked="true">10 أسئلة</button>
+                        <button type="button" class="count-btn" data-count="15" role="radio" aria-checked="false">15 سؤالاً</button>
+                        <button type="button" class="count-btn" data-count="20" role="radio" aria-checked="false">20 سؤالاً</button>
+                        <button type="button" class="count-btn" data-count="25" role="radio" aria-checked="false">25 سؤالاً</button>
+                        <button type="button" class="count-btn" data-count="30" role="radio" aria-checked="false">30 سؤالاً</button>
+                    </div>
+                </div>
+
+                <!-- Tabs header: Difficulty vs Categories -->
+                <div class="selection-tabs-header">
+                    <h3 class="subsection-title">٣. أسلوب تحديد الأسئلة</h3>
+                    <div class="selection-tabs" role="tablist">
+                        <button type="button" class="tab-btn active" data-tab="difficulty-mode" role="tab" aria-selected="true">أنماط الصعوبة</button>
+                        <button type="button" class="tab-btn" data-tab="categories-mode" role="tab" aria-selected="false">التصنيفات العلمية</button>
+                    </div>
+                </div>
+
+                <!-- Tab 1: Difficulty Mode Selection -->
+                <div class="tab-content active" id="tab-difficulty-mode" role="tabpanel">
+                    <div class="cards-grid">
+                        <div class="mode-card diff-card beginner selected" data-mode="difficulty" data-val="easy" role="button" tabindex="0">
+                            <div class="card-icon"><svg class="ph-duotone ph-plant icon-green" viewBox="0 0 256 256" width="32" height="32" fill="currentColor" aria-hidden="true" ><path d="M138.54,149.46C106.62,96.25,149.18,43.05,239.63,48.37,245,138.82,191.75,181.39,138.54,149.46ZM16.26,88.26c-3.8,64.61,34.21,95,72.21,72.21C111.27,122.47,80.87,84.46,16.26,88.26Z" opacity="0.2"/><path d="M247.63,47.89a8,8,0,0,0-7.52-7.52c-51.76-3-93.32,12.74-111.18,42.22-11.8,19.48-11.78,43.16-.16,65.74a71.37,71.37,0,0,0-14.17,26.95L98.33,159c7.82-16.33,7.52-33.36-1-47.49C84.09,89.73,53.62,78,15.79,80.27a8,8,0,0,0-7.52,7.52c-2.23,37.83,9.46,68.3,31.25,81.5A45.82,45.82,0,0,0,63.44,176,54.58,54.58,0,0,0,87,170.33l25,25V224a8,8,0,0,0,16,0V194.51a55.61,55.61,0,0,1,12.27-35,73.91,73.91,0,0,0,33.31,8.4,60.9,60.9,0,0,0,31.83-8.86C234.89,141.21,250.67,99.65,247.63,47.89ZM86.06,146.74l-24.41-24.4a8,8,0,0,0-11.31,11.31l24.41,24.41c-9.61,3.18-18.93,2.39-26.94-2.46C32.47,146.31,23.79,124.32,24,96c28.31-.25,50.31,8.47,59.6,23.81C88.45,127.82,89.24,137.14,86.06,146.74Zm111.06-1.36c-13.4,8.11-29.15,8.73-45.15,2l53.69-53.7a8,8,0,0,0-11.31-11.32L140.65,136c-6.76-16-6.15-31.76,2-45.15,13.94-23,47-35.8,89.33-34.83C232.94,98.34,220.14,131.44,197.12,145.38Z"/></svg></div>
+                            <h4 class="card-title">المبتدئ</h4>
+                            <p class="card-desc">أسئلة عامة وميسرة تناسب البدايات لتأسيس معرفي رصين.</p>
+                            <div class="card-meta">
+                                <span class="meta-item"><svg class="ph-duotone ph-timer icon-gold" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" ><path d="M216,136a88,88,0,1,1-88-88A88,88,0,0,1,216,136Z" opacity="0.2"/><path d="M128,40a96,96,0,1,0,96,96A96.11,96.11,0,0,0,128,40Zm0,176a80,80,0,1,1,80-80A80.09,80.09,0,0,1,128,216ZM173.66,90.34a8,8,0,0,1,0,11.32l-40,40a8,8,0,0,1-11.32-11.32l40-40A8,8,0,0,1,173.66,90.34ZM96,16a8,8,0,0,1,8-8h48a8,8,0,0,1,0,16H104A8,8,0,0,1,96,16Z"/></svg> 20 ثانية / سؤال</span>
+                                <span class="meta-item"><svg class="ph-duotone ph-plant icon-green" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" ><path d="M138.54,149.46C106.62,96.25,149.18,43.05,239.63,48.37,245,138.82,191.75,181.39,138.54,149.46ZM16.26,88.26c-3.8,64.61,34.21,95,72.21,72.21C111.27,122.47,80.87,84.46,16.26,88.26Z" opacity="0.2"/><path d="M247.63,47.89a8,8,0,0,0-7.52-7.52c-51.76-3-93.32,12.74-111.18,42.22-11.8,19.48-11.78,43.16-.16,65.74a71.37,71.37,0,0,0-14.17,26.95L98.33,159c7.82-16.33,7.52-33.36-1-47.49C84.09,89.73,53.62,78,15.79,80.27a8,8,0,0,0-7.52,7.52c-2.23,37.83,9.46,68.3,31.25,81.5A45.82,45.82,0,0,0,63.44,176,54.58,54.58,0,0,0,87,170.33l25,25V224a8,8,0,0,0,16,0V194.51a55.61,55.61,0,0,1,12.27-35,73.91,73.91,0,0,0,33.31,8.4,60.9,60.9,0,0,0,31.83-8.86C234.89,141.21,250.67,99.65,247.63,47.89ZM86.06,146.74l-24.41-24.4a8,8,0,0,0-11.31,11.31l24.41,24.41c-9.61,3.18-18.93,2.39-26.94-2.46C32.47,146.31,23.79,124.32,24,96c28.31-.25,50.31,8.47,59.6,23.81C88.45,127.82,89.24,137.14,86.06,146.74Zm111.06-1.36c-13.4,8.11-29.15,8.73-45.15,2l53.69-53.7a8,8,0,0,0-11.31-11.32L140.65,136c-6.76-16-6.15-31.76,2-45.15,13.94-23,47-35.8,89.33-34.83C232.94,98.34,220.14,131.44,197.12,145.38Z"/></svg> المستوى التأسيسي</span>
+                            </div>
+                            <span class="card-action-btn">محدد حالياً <svg class="ph-duotone ph-check-circle icon-green" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" ><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"/><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg></span>
+                        </div>
+
+                        <div class="mode-card diff-card intermediate" data-mode="difficulty" data-val="medium" role="button" tabindex="0">
+                            <div class="card-icon"><svg class="ph-duotone ph-compass icon-gold" viewBox="0 0 256 256" width="32" height="32" fill="currentColor" aria-hidden="true" ><path d="M128,32a96,96,0,1,0,96,96A96,96,0,0,0,128,32Zm16,112L80,176l32-64,64-32Z" opacity="0.2"/><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216ZM172.42,72.84l-64,32a8.05,8.05,0,0,0-3.58,3.58l-32,64A8,8,0,0,0,80,184a8.1,8.1,0,0,0,3.58-.84l64-32a8.05,8.05,0,0,0,3.58-3.58l32-64a8,8,0,0,0-10.74-10.74ZM138,138,97.89,158.11,118,118l40.15-20.07Z"/></svg></div>
+                            <h4 class="card-title">المتوسط</h4>
+                            <p class="card-desc">تحديات تتطلب قراءة وإلماماً بأساسيات العلوم الشرعية والسيرة.</p>
+                            <div class="card-meta">
+                                <span class="meta-item"><svg class="ph-duotone ph-timer icon-gold" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" ><path d="M216,136a88,88,0,1,1-88-88A88,88,0,0,1,216,136Z" opacity="0.2"/><path d="M128,40a96,96,0,1,0,96,96A96.11,96.11,0,0,0,128,40Zm0,176a80,80,0,1,1,80-80A80.09,80.09,0,0,1,128,216ZM173.66,90.34a8,8,0,0,1,0,11.32l-40,40a8,8,0,0,1-11.32-11.32l40-40A8,8,0,0,1,173.66,90.34ZM96,16a8,8,0,0,1,8-8h48a8,8,0,0,1,0,16H104A8,8,0,0,1,96,16Z"/></svg> 20 ثانية / سؤال</span>
+                                <span class="meta-item"><svg class="ph-duotone ph-compass icon-gold" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" ><path d="M128,32a96,96,0,1,0,96,96A96,96,0,0,0,128,32Zm16,112L80,176l32-64,64-32Z" opacity="0.2"/><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216ZM172.42,72.84l-64,32a8.05,8.05,0,0,0-3.58,3.58l-32,64A8,8,0,0,0,80,184a8.1,8.1,0,0,0,3.58-.84l64-32a8.05,8.05,0,0,0,3.58-3.58l32-64a8,8,0,0,0-10.74-10.74ZM138,138,97.89,158.11,118,118l40.15-20.07Z"/></svg> المستوى المتوسط</span>
+                            </div>
+                            <span class="card-action-btn">اختر النمط</span>
+                        </div>
+
+                        <div class="mode-card diff-card advanced" data-mode="difficulty" data-val="hard" role="button" tabindex="0">
+                            <div class="card-icon"><svg class="ph-duotone ph-graduation-cap icon-gold" viewBox="0 0 256 256" width="32" height="32" fill="currentColor" aria-hidden="true" ><path d="M216,113.07v53.22a8,8,0,0,1-2,5.31c-11.3,12.59-38.9,36.4-86,36.4s-74.68-23.81-86-36.4a8,8,0,0,1-2-5.31V113.07L128,160Z" opacity="0.2"/><path d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"/></svg></div>
+                            <h4 class="card-title">المتقدم</h4>
+                            <p class="card-desc">أسئلة عميقة وتفصيلية في العقيدة والفقه والتاريخ الإسلامي.</p>
+                            <div class="card-meta">
+                                <span class="meta-item"><svg class="ph-duotone ph-timer icon-gold" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" ><path d="M216,136a88,88,0,1,1-88-88A88,88,0,0,1,216,136Z" opacity="0.2"/><path d="M128,40a96,96,0,1,0,96,96A96.11,96.11,0,0,0,128,40Zm0,176a80,80,0,1,1,80-80A80.09,80.09,0,0,1,128,216ZM173.66,90.34a8,8,0,0,1,0,11.32l-40,40a8,8,0,0,1-11.32-11.32l40-40A8,8,0,0,1,173.66,90.34ZM96,16a8,8,0,0,1,8-8h48a8,8,0,0,1,0,16H104A8,8,0,0,1,96,16Z"/></svg> 15 ثانية / سؤال</span>
+                                <span class="meta-item"><svg class="ph-duotone ph-graduation-cap icon-gold" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" ><path d="M216,113.07v53.22a8,8,0,0,1-2,5.31c-11.3,12.59-38.9,36.4-86,36.4s-74.68-23.81-86-36.4a8,8,0,0,1-2-5.31V113.07L128,160Z" opacity="0.2"/><path d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"/></svg> المستوى المتقدم</span>
+                            </div>
+                            <span class="card-action-btn">اختر النمط</span>
+                        </div>
+
+                        <div class="mode-card diff-card expert" data-mode="difficulty" data-val="expert" role="button" tabindex="0">
+                            <div class="card-icon"><svg class="ph-duotone ph-crown icon-gold" viewBox="0 0 256 256" width="32" height="32" fill="currentColor" aria-hidden="true" ><path d="M216.71,99.73l-15.6,93.59a8,8,0,0,1-7.89,6.68H62.78a8,8,0,0,1-7.89-6.68L39.29,99.73l.08,0a19.82,19.82,0,0,0,9.22-4.16h0L88,144l32-73.65h0a20,20,0,0,0,15.92,0h0L168,144l39.39-48.48h0a19.82,19.82,0,0,0,9.22,4.16Z" opacity="0.2"/><path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM193.22,192H62.78L48.86,108.52,81.79,149A8,8,0,0,0,88,152a7.83,7.83,0,0,0,1.08-.07,8,8,0,0,0,6.26-4.74l29.3-67.4a27,27,0,0,0,6.72,0l29.3,67.4a8,8,0,0,0,6.26,4.74A7.83,7.83,0,0,0,168,152a8,8,0,0,0,6.21-3l32.93-40.52ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z"/></svg></div>
+                            <h4 class="card-title">الخبير</h4>
+                            <p class="card-desc">تحدي النخبة! أسئلة دقيقة لطلاب العلم الشرعي والباحثين المتعمقين.</p>
+                            <div class="card-meta">
+                                <span class="meta-item"><svg class="ph-duotone ph-timer icon-gold" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" ><path d="M216,136a88,88,0,1,1-88-88A88,88,0,0,1,216,136Z" opacity="0.2"/><path d="M128,40a96,96,0,1,0,96,96A96.11,96.11,0,0,0,128,40Zm0,176a80,80,0,1,1,80-80A80.09,80.09,0,0,1,128,216ZM173.66,90.34a8,8,0,0,1,0,11.32l-40,40a8,8,0,0,1-11.32-11.32l40-40A8,8,0,0,1,173.66,90.34ZM96,16a8,8,0,0,1,8-8h48a8,8,0,0,1,0,16H104A8,8,0,0,1,96,16Z"/></svg> 12 ثانية / سؤال</span>
+                                <span class="meta-item"><svg class="ph-duotone ph-crown icon-gold" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" ><path d="M216.71,99.73l-15.6,93.59a8,8,0,0,1-7.89,6.68H62.78a8,8,0,0,1-7.89-6.68L39.29,99.73l.08,0a19.82,19.82,0,0,0,9.22-4.16h0L88,144l32-73.65h0a20,20,0,0,0,15.92,0h0L168,144l39.39-48.48h0a19.82,19.82,0,0,0,9.22,4.16Z" opacity="0.2"/><path d="M248,80a28,28,0,1,0-51.12,15.77l-26.79,33L146,73.4a28,28,0,1,0-36.06,0L85.91,128.74l-26.79-33a28,28,0,1,0-26.6,12L47,194.63A16,16,0,0,0,62.78,208H193.22A16,16,0,0,0,209,194.63l14.47-86.85A28,28,0,0,0,248,80ZM128,40a12,12,0,1,1-12,12A12,12,0,0,1,128,40ZM24,80A12,12,0,1,1,36,92,12,12,0,0,1,24,80ZM193.22,192H62.78L48.86,108.52,81.79,149A8,8,0,0,0,88,152a7.83,7.83,0,0,0,1.08-.07,8,8,0,0,0,6.26-4.74l29.3-67.4a27,27,0,0,0,6.72,0l29.3,67.4a8,8,0,0,0,6.26,4.74A7.83,7.83,0,0,0,168,152a8,8,0,0,0,6.21-3l32.93-40.52ZM220,92a12,12,0,1,1,12-12A12,12,0,0,1,220,92Z"/></svg> مستوى النخبة</span>
+                            </div>
+                            <span class="card-action-btn">اختر النمط</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Category Mode Selection -->
+                <div class="tab-content" id="tab-categories-mode" role="tabpanel">
+                    <div class="categories-grid" id="categories-list-container">
+                        <!-- 10 Categories injected dynamically by script.js -->
+                    </div>
+                </div>
+
+                <!-- Setup Summary Bar -->
+                <div class="setup-summary-bar">
+                    <div class="summary-info">
+                        <span class="summary-label">الخيار المحدد:</span>
+                        <strong class="summary-text" id="selected-setup-name">نمط الصعوبة: المبتدئ (10 أسئلة)</strong>
+                    </div>
+                    <button class="btn btn-primary" id="launch-quiz-btn"><span>ابدأ جلسة الأسئلة</span> <svg class="ph-duotone ph-rocket-launch" viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true" ><path d="M184,120v61.65a8,8,0,0,1-2.34,5.65l-34.35,34.35a8,8,0,0,1-13.57-4.53L128,176ZM136,72H74.35a8,8,0,0,0-5.65,2.34L34.35,108.69a8,8,0,0,0,4.53,13.57L80,128ZM40,216c37.65,0,50.69-19.69,54.56-28.18L68.18,161.44C59.69,165.31,40,178.35,40,216Z" opacity="0.2"/><path d="M223.85,47.12a16,16,0,0,0-15-15c-12.58-.75-44.73.4-71.41,27.07L132.69,64H74.36A15.91,15.91,0,0,0,63,68.68L28.7,103a16,16,0,0,0,9.07,27.16l38.47,5.37,44.21,44.21,5.37,38.49a15.94,15.94,0,0,0,10.78,12.92,16.11,16.11,0,0,0,5.1.83A15.91,15.91,0,0,0,153,227.3L187.32,193A15.91,15.91,0,0,0,192,181.64V123.31l4.77-4.77C223.45,91.86,224.6,59.71,223.85,47.12ZM74.36,80h42.33L77.16,119.52,40,114.34Zm74.41-9.45a76.65,76.65,0,0,1,59.11-22.47,76.46,76.46,0,0,1-22.42,59.16L128,164.68,91.32,128ZM176,181.64,141.67,216l-5.19-37.17L176,139.31Zm-74.16,9.5C97.34,201,82.29,224,40,224a8,8,0,0,1-8-8c0-42.29,23-57.34,32.86-61.85a8,8,0,0,1,6.64,14.56c-6.43,2.93-20.62,12.36-23.12,38.91,26.55-2.5,36-16.69,38.91-23.12a8,8,0,1,1,14.56,6.64Z"/></svg></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Quiz Screen -->
+        <section id="screen-quiz" class="app-screen">
+            <div class="quiz-layout-container">
+                <!-- Left/Top Info Panel -->
+                <div class="quiz-info-panel">
+                    <div class="quiz-progress-section">
+                        <div class="quiz-progress-text">
+                            <span>السؤال</span>
+                            <strong id="quiz-question-index">1</strong>
+                            <span>من</span>
+                            <strong id="quiz-total-questions">10</strong>
+                        </div>
+                        <div class="quiz-progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                            <div class="quiz-progress-bar-fill" id="quiz-progress-bar-fill" style="width: 10%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-badge-info">
+                        <div class="info-card">
+                            <span class="card-lbl">التصنيف الحالي</span>
+                            <strong class="card-val" id="quiz-current-category">القرآن الكريم</strong>
+                        </div>
+                        <div class="info-card">
+                            <span class="card-lbl">النقاط الحالية</span>
+                            <strong class="card-val score-glow" id="quiz-current-score">0</strong>
+                        </div>
+                    </div>
+
+                    <!-- Smart Timer Widget -->
+                    <div class="smart-timer-container" aria-live="polite">
+                        <svg class="timer-progress-ring" viewBox="0 0 120 120" aria-hidden="true">
+                            <circle class="ring-bg" cx="60" cy="60" r="50" />
+                            <circle class="ring-fill" id="timer-ring-fill" cx="60" cy="60" r="50" />
+                        </svg>
+                        <div class="timer-text-overlay">
+                            <span class="timer-digits" id="timer-digits">20</span>
+                            <span class="timer-lbl">ثانية</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question Board -->
+                <div class="question-board">
+                    <div class="question-header">
+                        <span class="q-difficulty-badge" id="question-difficulty-badge">المبتدئ</span>
+                        <button type="button" class="favorite-toggle-btn" id="favorite-btn" title="حفظ السؤال في المفضلة" aria-label="حفظ السؤال في المفضلة">
+                            <svg class="heart-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                                <path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                            </svg>
+                            <span>حفظ</span>
+                        </button>
+                    </div>
+
+                    <!-- Question Body -->
+                    <div class="question-body">
+                        <h3 class="question-text" id="question-text">جاري تحميل السؤال...</h3>
+                    </div>
+
+                    <!-- Answers Options Grid -->
+                    <div class="options-grid" id="options-grid-container" role="radiogroup" aria-label="خيارات الإجابة">
+                        <!-- 4 Option cards injected by JS -->
+                    </div>
+
+                    <!-- Educational Feedback Panel -->
+                    <div class="feedback-panel hidden" id="feedback-panel" aria-live="polite">
+                        <div class="feedback-icon" id="feedback-icon"><svg class="ph-duotone ph-check-circle icon-green" viewBox="0 0 256 256" width="28" height="28" fill="currentColor" aria-hidden="true" ><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"/><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg></div>
+                        <div class="feedback-text-content">
+                            <h4 class="feedback-title" id="feedback-title">إجابة صحيحة!</h4>
+                            <p class="feedback-desc" id="feedback-explanation">التفسير العلمي والشرح التوضيحي مع الأدلة الشرعية الموثقة.</p>
+                            <div class="feedback-actions-row">
+                                <button type="button" class="btn btn-sm btn-outline feedback-action-btn" id="open-source-modal-btn">
+                                    <span><svg class="ph-duotone ph-book-bookmark icon-gold" viewBox="0 0 256 256" width="15" height="15" fill="currentColor" aria-hidden="true" ><path d="M208,32V192H72a24,24,0,0,0-24,24V56A24,24,0,0,1,72,32h40v96l32-24,32,24V32Z" opacity="0.2"/><path d="M208,24H72A32,32,0,0,0,40,56V224a8,8,0,0,0,8,8H192a8,8,0,0,0,0-16H56a16,16,0,0,1,16-16H208a8,8,0,0,0,8-8V32A8,8,0,0,0,208,24ZM120,40h48v72L148.79,97.6a8,8,0,0,0-9.6,0L120,112Zm80,144H72a31.82,31.82,0,0,0-16,4.29V56A16,16,0,0,1,72,40h32v88a8,8,0,0,0,12.8,6.4L144,114l27.21,20.4A8,8,0,0,0,176,136a8.1,8.1,0,0,0,3.58-.84A8,8,0,0,0,184,128V40h16Z"/></svg> المصدر والتوثيق الشرعي</span>
+                                </button>
+                                <button type="button" class="btn btn-sm btn-outline feedback-action-btn" id="report-question-btn">
+                                    <span><svg class="ph-duotone ph-warning-circle icon-red" viewBox="0 0 256 256" width="15" height="15" fill="currentColor" aria-hidden="true" ><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"/><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"/></svg> إبلاغ عن ملاحظة</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quiz Footer Actions -->
+                    <div class="quiz-footer">
+                        <div class="quiz-footer-secondary">
+                            <button class="btn btn-outline" id="quit-quiz-btn">انسحاب</button>
+                            <button type="button" class="btn btn-outline" id="review-quiz-btn" title="مراجعة كافة الأسئلة قبل التسليم">
+                                <span><svg class="ph-duotone ph-copy icon-gold" viewBox="0 0 256 256" width="15" height="15" fill="currentColor" aria-hidden="true" ><path d="M216,40V168H168V88H88V40Z" opacity="0.2"/><path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"/></svg> مراجعة الإجابات</span>
+                            </button>
+                        </div>
+                        <button class="btn btn-secondary disabled" id="next-question-btn" disabled>
+                            <span>السؤال التالي</span>
+                            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                                <path fill="currentColor" d="M14 7l-5 5 5 5V7z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Results Dashboard Screen -->
+        <section id="screen-results" class="app-screen">
+            <div class="results-container">
+                <div class="hero-geometric-badge">
+                    <svg viewBox="0 0 24 24" width="48" height="48" fill="var(--color-secondary)" aria-hidden="true">
+                        <path d="M12 2l2.4 7.4h7.6l-6.2 4.5 2.4 7.4-6.2-4.5-6.2 4.5 2.4-7.4-6.2-4.5h7.6z"/>
+                    </svg>
+                </div>
+                
+                <h2 class="section-title text-center" id="results-motivational-title">تقبل الله سعيكم العلمي!</h2>
+                <p class="section-subtitle text-center" id="results-motivational-desc">لقد أكملت جلسة الاختبار بنجاح. إليك ملخص أدائك المعرفي الموثق:</p>
+
+                <!-- Performance Dashboard Score and Circle -->
+                <div class="results-dashboard-grid">
+                    <!-- Circular Score Meter -->
+                    <div class="score-radial-widget">
+                        <div class="radial-container">
+                            <svg class="radial-svg" viewBox="0 0 160 160" aria-hidden="true">
+                                <circle class="r-bg" cx="80" cy="80" r="70" />
+                                <circle class="r-fill" id="results-ring-fill" cx="80" cy="80" r="70" />
+                            </svg>
+                            <div class="radial-content">
+                                <span class="radial-percent" id="results-percent">0%</span>
+                                <span class="radial-score-txt" id="results-fraction">0 / 10</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Statistics Breakdown Details -->
+                    <div class="results-breakdown-details">
+                        <div class="details-row">
+                            <span class="detail-label">نقاط الخبرة المكتسبة (XP):</span>
+                            <strong class="detail-value text-gold" id="results-xp-earned">+0 XP</strong>
+                        </div>
+                        <div class="details-row">
+                            <span class="detail-label">الإجابات الصحيحة:</span>
+                            <strong class="detail-value text-green" id="results-correct-count">0</strong>
+                        </div>
+                        <div class="details-row">
+                            <span class="detail-label">الإجابات الخاطئة:</span>
+                            <strong class="detail-value text-red" id="results-wrong-count">0</strong>
+                        </div>
+                        <div class="details-row">
+                            <span class="detail-label">الأسئلة المنتهية بالوقت:</span>
+                            <strong class="detail-value" id="results-timeout-count">0</strong>
+                        </div>
+                        <div class="details-row">
+                            <span class="detail-label">معدل الدقة الإجمالي:</span>
+                            <strong class="detail-value text-green" id="results-accuracy">0%</strong>
+                        </div>
+                        <div class="details-row">
+                            <span class="detail-label">الوقت المستغرق:</span>
+                            <strong class="detail-value" id="results-time-taken">0 ثانية</strong>
+                        </div>
+                        <div class="details-row">
+                            <span class="detail-label">مستوى الأداء:</span>
+                            <strong class="detail-value" id="results-performance-level">المبتدئ</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newly Unlocked Badges Panel -->
+                <div class="new-badges-unlock-panel hidden" id="new-badges-panel">
+                    <h3 class="panel-subtitle"><svg class="ph-duotone ph-trophy icon-gold" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true" ><path d="M200,48v63.1c0,39.7-31.75,72.6-71.45,72.9A72,72,0,0,1,56,112V48Z" opacity="0.2"/><path d="M232,64H208V48a8,8,0,0,0-8-8H56a8,8,0,0,0-8,8V64H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8Zm144-8.9c0,35.52-29,64.64-64,64.9a64,64,0,0,1-64-64V56H192ZM232,96a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z"/></svg> أوسمة جديدة تم استحقاقها!</h3>
+                    <div class="unlocked-badges-row" id="unlocked-badges-row-container">
+                        <!-- Badges injected by JS -->
+                    </div>
+                </div>
+
+                <!-- Action Button Controls -->
+                <div class="results-actions">
+                    <button class="btn btn-outline btn-lg" id="results-home-btn">العودة للرئيسية</button>
+                    <button type="button" class="btn btn-secondary btn-lg" id="results-share-btn">
+                        <span><svg class="ph-duotone ph-share-network icon-gold" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" ><path d="M208,200a32,32,0,1,1-32-32A32,32,0,0,1,208,200ZM176,88a32,32,0,1,0-32-32A32,32,0,0,0,176,88Z" opacity="0.2"/><path d="M176,160a39.89,39.89,0,0,0-28.62,12.09l-46.1-29.63a39.8,39.8,0,0,0,0-28.92l46.1-29.63a40,40,0,1,0-8.66-13.45l-46.1,29.63a40,40,0,1,0,0,55.82l46.1,29.63A40,40,0,1,0,176,160Zm0-128a24,24,0,1,1-24,24A24,24,0,0,1,176,32ZM64,152a24,24,0,1,1,24-24A24,24,0,0,1,64,152Zm112,72a24,24,0,1,1,24-24A24,24,0,0,1,176,224Z"/></svg> مشاركة النتيجة وتحدي صديق</span>
+                    </button>
+                    <button type="button" class="btn btn-outline btn-lg" id="results-leaderboard-btn">
+                        <span><svg class="ph-duotone ph-trophy icon-gold" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" ><path d="M200,48v63.1c0,39.7-31.75,72.6-71.45,72.9A72,72,0,0,1,56,112V48Z" opacity="0.2"/><path d="M232,64H208V48a8,8,0,0,0-8-8H56a8,8,0,0,0-8,8V64H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8Zm144-8.9c0,35.52-29,64.64-64,64.9a64,64,0,0,1-64-64V56H192ZM232,96a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z"/></svg> لوحة المتصدرين</span>
+                    </button>
+                    <button class="btn btn-outline btn-lg hidden" id="results-retry-wrong-btn"><span>مراجعة وتكرار الأسئلة الخاطئة</span> <svg class="ph-duotone ph-arrow-counter-clockwise" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" ><path d="M216,128a88,88,0,1,1-88-88A88,88,0,0,1,216,128Z" opacity="0.2"/><path d="M224,128a96,96,0,0,1-94.71,96H128A95.38,95.38,0,0,1,62.1,197.8a8,8,0,0,1,11-11.63A80,80,0,1,0,71.43,71.39a3.07,3.07,0,0,1-.26.25L44.59,96H72a8,8,0,0,1,0,16H24a8,8,0,0,1-8-8V56a8,8,0,0,1,16,0V85.8L60.25,60A96,96,0,0,1,224,128Z"/></svg></button>
+                    <button class="btn btn-primary btn-lg pulse-glow" id="results-retry-btn">إعادة نفس الاختبار</button>
+                </div>
+
+                <!-- Accordion: Review Answers Details -->
+                <div class="review-accordion-wrapper">
+                    <button class="accordion-header" id="toggle-review-btn" aria-expanded="false">
+                        <span>مراجعة الأسئلة والإجابات التفصيلية مع المصادر</span>
+                        <svg class="accordion-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                            <path fill="currentColor" d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
+                        </svg>
+                    </button>
+                    <div class="accordion-content hidden" id="review-answers-list">
+                        <!-- Review list injected by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Favorites Screen (المفضلة) -->
+        <section id="screen-favorites" class="app-screen">
+            <div class="selection-container">
+                <button class="back-btn" id="favorites-back-btn" aria-label="العودة">
+                    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                        <path fill="currentColor" d="M10 17l5-5-5-5v10z"/>
+                    </svg>
+                    <span>العودة للرئيسية</span>
+                </button>
+
+                <div class="screen-header-row">
+                    <div>
+                        <h2 class="section-title">قائمة الأسئلة المفضلة <svg class="ph-duotone ph-bookmark-simple icon-gold" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" ><path d="M192,48V224l-64-40L64,224V48a8,8,0,0,1,8-8H184A8,8,0,0,1,192,48Z" opacity="0.2"/><path d="M184,32H72A16,16,0,0,0,56,48V224a8,8,0,0,0,12.24,6.78L128,193.43l59.77,37.35A8,8,0,0,0,200,224V48A16,16,0,0,0,184,32Zm0,177.57-51.77-32.35a8,8,0,0,0-8.48,0L72,209.57V48H184Z"/></svg></h2>
+                        <p class="section-subtitle">الأسئلة التي قمت بحفظها أثناء الاختبارات للمراجعة الدورية وتثبيت الحفظ.</p>
+                    </div>
+                    <button class="btn btn-primary" id="start-favorites-quiz-btn"><span>اختبار الأسئلة المفضلة</span> <svg class="ph-duotone ph-rocket-launch" viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true" ><path d="M184,120v61.65a8,8,0,0,1-2.34,5.65l-34.35,34.35a8,8,0,0,1-13.57-4.53L128,176ZM136,72H74.35a8,8,0,0,0-5.65,2.34L34.35,108.69a8,8,0,0,0,4.53,13.57L80,128ZM40,216c37.65,0,50.69-19.69,54.56-28.18L68.18,161.44C59.69,165.31,40,178.35,40,216Z" opacity="0.2"/><path d="M223.85,47.12a16,16,0,0,0-15-15c-12.58-.75-44.73.4-71.41,27.07L132.69,64H74.36A15.91,15.91,0,0,0,63,68.68L28.7,103a16,16,0,0,0,9.07,27.16l38.47,5.37,44.21,44.21,5.37,38.49a15.94,15.94,0,0,0,10.78,12.92,16.11,16.11,0,0,0,5.1.83A15.91,15.91,0,0,0,153,227.3L187.32,193A15.91,15.91,0,0,0,192,181.64V123.31l4.77-4.77C223.45,91.86,224.6,59.71,223.85,47.12ZM74.36,80h42.33L77.16,119.52,40,114.34Zm74.41-9.45a76.65,76.65,0,0,1,59.11-22.47,76.46,76.46,0,0,1-22.42,59.16L128,164.68,91.32,128ZM176,181.64,141.67,216l-5.19-37.17L176,139.31Zm-74.16,9.5C97.34,201,82.29,224,40,224a8,8,0,0,1-8-8c0-42.29,23-57.34,32.86-61.85a8,8,0,0,1,6.64,14.56c-6.43,2.93-20.62,12.36-23.12,38.91,26.55-2.5,36-16.69,38.91-23.12a8,8,0,1,1,14.56,6.64Z"/></svg></button>
+                </div>
+
+                <div class="empty-state-card hidden" id="favorites-empty-state">
+                    <div class="empty-icon"><svg class="ph-duotone ph-bookmark-simple icon-gold" viewBox="0 0 256 256" width="48" height="48" fill="currentColor" aria-hidden="true" ><path d="M192,48V224l-64-40L64,224V48a8,8,0,0,1,8-8H184A8,8,0,0,1,192,48Z" opacity="0.2"/><path d="M184,32H72A16,16,0,0,0,56,48V224a8,8,0,0,0,12.24,6.78L128,193.43l59.77,37.35A8,8,0,0,0,200,224V48A16,16,0,0,0,184,32Zm0,177.57-51.77-32.35a8,8,0,0,0-8.48,0L72,209.57V48H184Z"/></svg></div>
+                    <h3>لا توجد أسئلة محفوظة بعد</h3>
+                    <p>انقر على أيقونة القلب أثناء الإجابة على أي سؤال لحفظه هنا ومراجعته في أي وقت.</p>
+                </div>
+
+                <div class="favorites-list-grid" id="favorites-list-container">
+                    <!-- Favorite items injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Wrong Answer Review Screen (مراجعة الأخطاء) -->
+        <section id="screen-wrong-review" class="app-screen">
+            <div class="selection-container">
+                <button class="back-btn" id="wrong-review-back-btn" aria-label="العودة">
+                    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                        <path fill="currentColor" d="M10 17l5-5-5-5v10z"/>
+                    </svg>
+                    <span>العودة للرئيسية</span>
+                </button>
+
+                <div class="screen-header-row">
+                    <div>
+                        <h2 class="section-title">مراجعة الإجابات السابقة الخاطئة <svg class="ph-duotone ph-arrow-counter-clockwise icon-gold" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" ><path d="M216,128a88,88,0,1,1-88-88A88,88,0,0,1,216,128Z" opacity="0.2"/><path d="M224,128a96,96,0,0,1-94.71,96H128A95.38,95.38,0,0,1,62.1,197.8a8,8,0,0,1,11-11.63A80,80,0,1,0,71.43,71.39a3.07,3.07,0,0,1-.26.25L44.59,96H72a8,8,0,0,1,0,16H24a8,8,0,0,1-8-8V56a8,8,0,0,1,16,0V85.8L60.25,60A96,96,0,0,1,224,128Z"/></svg></h2>
+                        <p class="section-subtitle">تدارك ما فاتك وتثبيت الصواب! يعرض هذا القسم الأسئلة التي تعثرت فيها سابقاً لتصحيحها.</p>
+                    </div>
+                    <button class="btn btn-primary" id="start-wrong-quiz-btn"><span>إعادة اختبار الأخطاء</span> <svg class="ph-duotone ph-rocket-launch" viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true" ><path d="M184,120v61.65a8,8,0,0,1-2.34,5.65l-34.35,34.35a8,8,0,0,1-13.57-4.53L128,176ZM136,72H74.35a8,8,0,0,0-5.65,2.34L34.35,108.69a8,8,0,0,0,4.53,13.57L80,128ZM40,216c37.65,0,50.69-19.69,54.56-28.18L68.18,161.44C59.69,165.31,40,178.35,40,216Z" opacity="0.2"/><path d="M223.85,47.12a16,16,0,0,0-15-15c-12.58-.75-44.73.4-71.41,27.07L132.69,64H74.36A15.91,15.91,0,0,0,63,68.68L28.7,103a16,16,0,0,0,9.07,27.16l38.47,5.37,44.21,44.21,5.37,38.49a15.94,15.94,0,0,0,10.78,12.92,16.11,16.11,0,0,0,5.1.83A15.91,15.91,0,0,0,153,227.3L187.32,193A15.91,15.91,0,0,0,192,181.64V123.31l4.77-4.77C223.45,91.86,224.6,59.71,223.85,47.12ZM74.36,80h42.33L77.16,119.52,40,114.34Zm74.41-9.45a76.65,76.65,0,0,1,59.11-22.47,76.46,76.46,0,0,1-22.42,59.16L128,164.68,91.32,128ZM176,181.64,141.67,216l-5.19-37.17L176,139.31Zm-74.16,9.5C97.34,201,82.29,224,40,224a8,8,0,0,1-8-8c0-42.29,23-57.34,32.86-61.85a8,8,0,0,1,6.64,14.56c-6.43,2.93-20.62,12.36-23.12,38.91,26.55-2.5,36-16.69,38.91-23.12a8,8,0,1,1,14.56,6.64Z"/></svg></button>
+                </div>
+
+                <div class="empty-state-card hidden" id="wrong-empty-state">
+                    <div class="empty-icon"><svg class="ph-duotone ph-sparkle icon-gold" viewBox="0 0 256 256" width="48" height="48" fill="currentColor" aria-hidden="true" ><path d="M194.82,151.43l-55.09,20.3-20.3,55.09a7.92,7.92,0,0,1-14.86,0l-20.3-55.09-55.09-20.3a7.92,7.92,0,0,1,0-14.86l55.09-20.3,20.3-55.09a7.92,7.92,0,0,1,14.86,0l20.3,55.09,55.09,20.3A7.92,7.92,0,0,1,194.82,151.43Z" opacity="0.2"/><path d="M197.58,129.06,146,110l-19-51.62a15.92,15.92,0,0,0-29.88,0L78,110l-51.62,19a15.92,15.92,0,0,0,0,29.88L78,178l19,51.62a15.92,15.92,0,0,0,29.88,0L146,178l51.62-19a15.92,15.92,0,0,0,0-29.88ZM137,164.22a8,8,0,0,0-4.74,4.74L112,223.85,91.78,169A8,8,0,0,0,87,164.22L32.15,144,87,123.78A8,8,0,0,0,91.78,119L112,64.15,132.22,119a8,8,0,0,0,4.74,4.74L191.85,144ZM144,40a8,8,0,0,1,8-8h16V16a8,8,0,0,1,16,0V32h16a8,8,0,0,1,0,16H184V64a8,8,0,0,1-16,0V48H152A8,8,0,0,1,144,40ZM248,88a8,8,0,0,1-8,8h-8v8a8,8,0,0,1-16,0V96h-8a8,8,0,0,1,0-16h8V72a8,8,0,0,1,16,0v8h8A8,8,0,0,1,248,88Z"/></svg></div>
+                    <h3>سجلك خالٍ من الأخطاء حالياً!</h3>
+                    <p>ما شاء الله! لم يتم تسجيل إجابات خاطئة، أو أنك قمت بتصحيح جميع الأخطاء السابقة.</p>
+                </div>
+
+                <div class="wrong-answers-list-grid" id="wrong-answers-list-container">
+                    <!-- Wrong items injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Search Screen (البحث في بنك الأسئلة) -->
+        <section id="screen-search" class="app-screen">
+            <div class="selection-container">
+                <button class="back-btn" id="search-back-btn" aria-label="العودة">
+                    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                        <path fill="currentColor" d="M10 17l5-5-5-5v10z"/>
+                    </svg>
+                    <span>العودة للرئيسية</span>
+                </button>
+
+                <h2 class="section-title">البحث في بنك الأسئلة والمعارف <svg class="ph-duotone ph-magnifying-glass icon-gold" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" ><path d="M192,112a80,80,0,1,1-80-80A80,80,0,0,1,192,112Z" opacity="0.2"/><path d="M229.66,218.34,179.6,168.28a88.21,88.21,0,1,0-11.32,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg></h2>
+                <p class="section-subtitle">ابحث عن أي مسألة شرعية أو سؤال تاريخي مع الشرح والمصدر المعتمد بدون تشكيل أو بهمزات منوعة.</p>
+
+                <!-- Search Input & Filters Bar -->
+                <div class="search-controls-card">
+                    <div class="search-input-wrapper">
+                        <input type="text" id="search-input" class="search-text-input" placeholder="اكتب كلمة للبحث (مثل: البقرة، الصلاة، خديجة، بدر، عمر...)" aria-label="البحث عن سؤال">
+                        <span class="search-icon-inside" aria-hidden="true"><svg class="ph-duotone ph-magnifying-glass icon-muted" viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true" ><path d="M192,112a80,80,0,1,1-80-80A80,80,0,0,1,192,112Z" opacity="0.2"/><path d="M229.66,218.34,179.6,168.28a88.21,88.21,0,1,0-11.32,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg></span>
+                    </div>
+
+                    <div class="search-filters-row">
+                        <div class="filter-group">
+                            <label for="search-cat-filter">التصنيف:</label>
+                            <select id="search-cat-filter" class="search-filter-select">
+                                <option value="all">كافة التصنيفات (10 أقسام)</option>
+                                <option value="القرآن الكريم">القرآن الكريم</option>
+                                <option value="الحديث الشريف">الحديث الشريف</option>
+                                <option value="السيرة النبوية">السيرة النبوية</option>
+                                <option value="قصص الأنبياء">قصص الأنبياء</option>
+                                <option value="الصحابة">الصحابة</option>
+                                <option value="العقيدة">العقيدة</option>
+                                <option value="الفقه">الفقه</option>
+                                <option value="الأخلاق الإسلامية">الأخلاق الإسلامية</option>
+                                <option value="العبادات">العبادات</option>
+                                <option value="معلومات إسلامية عامة">التاريخ والمعلومات العامة</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="search-diff-filter">الصعوبة:</label>
+                            <select id="search-diff-filter" class="search-filter-select">
+                                <option value="all">كافة المستويات</option>
+                                <option value="easy">المبتدئ</option>
+                                <option value="medium">المتوسط</option>
+                                <option value="hard">المتقدم</option>
+                                <option value="expert">الخبير</option>
+                            </select>
+                        </div>
+
+                        <div class="search-count-badge">
+                            النتائج: <strong id="search-results-count">800 سؤالاً</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search Results Container -->
+                <div class="search-results-grid" id="search-results-container">
+                    <!-- Search result cards injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Daily Screen (التحدي والمعرفة اليومية) -->
+        <section id="screen-daily" class="app-screen">
+            <div class="selection-container">
+                <button class="back-btn" id="daily-back-btn" aria-label="العودة">
+                    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                        <path fill="currentColor" d="M10 17l5-5-5-5v10z"/>
+                    </svg>
+                    <span>العودة للرئيسية</span>
+                </button>
+
+                <div class="daily-screen-date-badge" id="daily-screen-date">اليوم</div>
+                <h2 class="section-title">الزاد والمسابقة اليومية <svg class="ph-duotone ph-lightning icon-gold" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" ><path d="M96,240l16-80L48,136,160,16,144,96l64,24Z" opacity="0.2"/><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg></h2>
+                <p class="section-subtitle">زاد إيماني ومعرفي يتجدد مع مطلع كل يوم لحفظ السنن وتوسيع المدارك.</p>
+
+                <!-- Daily Challenge Card -->
+                <div class="daily-challenge-master-card">
+                    <div class="dc-icon"><svg class="ph-duotone ph-trophy icon-gold" viewBox="0 0 256 256" width="48" height="48" fill="currentColor" aria-hidden="true" ><path d="M200,48v63.1c0,39.7-31.75,72.6-71.45,72.9A72,72,0,0,1,56,112V48Z" opacity="0.2"/><path d="M232,64H208V48a8,8,0,0,0-8-8H56a8,8,0,0,0-8,8V64H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8Zm144-8.9c0,35.52-29,64.64-64,64.9a64,64,0,0,1-64-64V56H192ZM232,96a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z"/></svg></div>
+                    <div class="dc-content">
+                        <h3>التحدي اليومي لجميع رواد مَعارِف</h3>
+                        <p>10 أسئلة منوعة مختارة بعناية لتاريخ اليوم، اختبر حفظك واكسب أوسمة المداومة.</p>
+                        <div id="daily-challenge-status" class="dc-status">
+                            <span class="status-badge ready"><svg class="ph-duotone ph-lightning icon-gold" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" ><path d="M96,240l16-80L48,136,160,16,144,96l64,24Z" opacity="0.2"/><path d="M215.79,118.17a8,8,0,0,0-5-5.66L153.18,90.9l14.66-73.33a8,8,0,0,0-13.69-7l-112,120a8,8,0,0,0,3,13l57.63,21.61L88.16,238.43a8,8,0,0,0,13.69,7l112-120A8,8,0,0,0,215.79,118.17ZM109.37,214l10.47-52.38a8,8,0,0,0-5-9.06L62,132.71l84.62-90.66L136.16,94.43a8,8,0,0,0,5,9.06l52.8,19.8Z"/></svg> جاهز للانطلاق</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-lg" id="start-daily-challenge-btn"><span>ابدأ التحدي اليومي</span> <svg class="ph-duotone ph-rocket-launch" viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true" ><path d="M184,120v61.65a8,8,0,0,1-2.34,5.65l-34.35,34.35a8,8,0,0,1-13.57-4.53L128,176ZM136,72H74.35a8,8,0,0,0-5.65,2.34L34.35,108.69a8,8,0,0,0,4.53,13.57L80,128ZM40,216c37.65,0,50.69-19.69,54.56-28.18L68.18,161.44C59.69,165.31,40,178.35,40,216Z" opacity="0.2"/><path d="M223.85,47.12a16,16,0,0,0-15-15c-12.58-.75-44.73.4-71.41,27.07L132.69,64H74.36A15.91,15.91,0,0,0,63,68.68L28.7,103a16,16,0,0,0,9.07,27.16l38.47,5.37,44.21,44.21,5.37,38.49a15.94,15.94,0,0,0,10.78,12.92,16.11,16.11,0,0,0,5.1.83A15.91,15.91,0,0,0,153,227.3L187.32,193A15.91,15.91,0,0,0,192,181.64V123.31l4.77-4.77C223.45,91.86,224.6,59.71,223.85,47.12ZM74.36,80h42.33L77.16,119.52,40,114.34Zm74.41-9.45a76.65,76.65,0,0,1,59.11-22.47,76.46,76.46,0,0,1-22.42,59.16L128,164.68,91.32,128ZM176,181.64,141.67,216l-5.19-37.17L176,139.31Zm-74.16,9.5C97.34,201,82.29,224,40,224a8,8,0,0,1-8-8c0-42.29,23-57.34,32.86-61.85a8,8,0,0,1,6.64,14.56c-6.43,2.93-20.62,12.36-23.12,38.91,26.55-2.5,36-16.69,38.91-23.12a8,8,0,1,1,14.56,6.64Z"/></svg></button>
+                </div>
+
+                <!-- Daily Knowledge Fact Full Card -->
+                <div class="daily-knowledge-full-card" id="daily-screen-fact-container">
+                    <!-- Full daily fact injected by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Leaderboard Screen (لوحة المتصدرين) -->
+        <section id="screen-leaderboard" class="app-screen">
+            <div class="selection-container">
+                <button class="back-btn" id="leaderboard-back-btn" aria-label="العودة">
+                    <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                        <path fill="currentColor" d="M10 17l5-5-5-5v10z"/>
+                    </svg>
+                    <span>العودة للرئيسية</span>
+                </button>
+
+                <div class="leaderboard-header-row">
+                    <div>
+                        <h2 class="section-title">لوحة المتصدرين والتنافس المعرفي <svg class="ph-duotone ph-trophy icon-gold" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" ><path d="M200,48v63.1c0,39.7-31.75,72.6-71.45,72.9A72,72,0,0,1,56,112V48Z" opacity="0.2"/><path d="M232,64H208V48a8,8,0,0,0-8-8H56a8,8,0,0,0-8,8V64H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8Zm144-8.9c0,35.52-29,64.64-64,64.9a64,64,0,0,1-64-64V56H192ZM232,96a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z"/></svg></h2>
+                        <p class="section-subtitle">أفضل النتائج المحققة على هذا الجهاز مصنفة حسب الدقة ونقاط الخبرة المكتسبة.</p>
+                    </div>
+                    <!-- Profile Card in Leaderboard -->
+                    <div class="active-profile-card">
+                        <div class="profile-info-mini">
+                            <span class="profile-badge-icon" id="lb-profile-icon"><svg class="ph-duotone ph-user-circle icon-gold" viewBox="0 0 256 256" width="22" height="22" fill="currentColor" aria-hidden="true" ><path d="M224,128a95.76,95.76,0,0,1-31.8,71.37A72,72,0,0,0,128,160a40,40,0,1,0-40-40,40,40,0,0,0,40,40,72,72,0,0,0-64.2,39.37h0A96,96,0,1,1,224,128Z" opacity="0.2"/><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24ZM74.08,197.5a64,64,0,0,1,107.84,0,87.83,87.83,0,0,1-107.84,0ZM96,120a32,32,0,1,1,32,32A32,32,0,0,1,96,120Zm97.76,66.41a79.66,79.66,0,0,0-36.06-28.75,48,48,0,1,0-59.4,0,79.66,79.66,0,0,0-36.06,28.75,88,88,0,1,1,131.52,0Z"/></svg></span>
+                            <div>
+                                <span class="profile-sub-lbl">الملف النشط:</span>
+                                <strong class="profile-name-txt" id="lb-profile-name">طالب علم</strong>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-outline" id="manage-profiles-btn" title="تبديل أو إضافة ملف شخصي">
+                            <span>إدارة الملفات</span> <svg class="ph-duotone ph-users" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" ><path d="M136,108A52,52,0,1,1,84,56,52,52,0,0,1,136,108Z" opacity="0.2"/><path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"/></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Filters & Controls Bar -->
+                <div class="search-controls-card">
+                    <div class="search-filters-row">
+                        <div class="filter-group">
+                            <label for="leaderboard-cat-filter">التصنيف:</label>
+                            <select id="leaderboard-cat-filter" class="search-filter-select">
+                                <option value="all">كافة التصنيفات (10 أقسام)</option>
+                                <option value="القرآن الكريم">القرآن الكريم</option>
+                                <option value="الحديث الشريف">الحديث الشريف</option>
+                                <option value="السيرة النبوية">السيرة النبوية</option>
+                                <option value="قصص الأنبياء">قصص الأنبياء</option>
+                                <option value="الصحابة">الصحابة</option>
+                                <option value="العقيدة">العقيدة</option>
+                                <option value="الفقه">الفقه</option>
+                                <option value="الأخلاق الإسلامية">الأخلاق الإسلامية</option>
+                                <option value="العبادات">العبادات</option>
+                                <option value="معلومات إسلامية عامة">التاريخ والمعلومات العامة</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="leaderboard-diff-filter">المستوى:</label>
+                            <select id="leaderboard-diff-filter" class="search-filter-select">
+                                <option value="all">كافة المستويات</option>
+                                <option value="easy">المبتدئ</option>
+                                <option value="medium">المتوسط</option>
+                                <option value="hard">المتقدم</option>
+                                <option value="expert">الخبير</option>
+                            </select>
+                        </div>
+
+                        <div class="leaderboard-actions-group">
+                            <button type="button" class="btn btn-sm btn-outline text-red" id="clear-leaderboard-btn" title="مسح سجل المتصدرين المحلي"><span>مسح السجل</span> <svg class="ph-duotone ph-trash" viewBox="0 0 256 256" width="14" height="14" fill="currentColor" aria-hidden="true" ><path d="M200,56V208a8,8,0,0,1-8,8H64a8,8,0,0,1-8-8V56Z" opacity="0.2"/><path d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"/></svg></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top 3 Podium (منصة التتويج) -->
+                <div class="leaderboard-podium" id="leaderboard-podium-container">
+                    <!-- Podium items injected by JS -->
+                </div>
+
+                <!-- Empty State -->
+                <div class="empty-state-card hidden" id="leaderboard-empty-state">
+                    <div class="empty-icon"><svg class="ph-duotone ph-trophy icon-gold" viewBox="0 0 256 256" width="48" height="48" fill="currentColor" aria-hidden="true" ><path d="M200,48v63.1c0,39.7-31.75,72.6-71.45,72.9A72,72,0,0,1,56,112V48Z" opacity="0.2"/><path d="M232,64H208V48a8,8,0,0,0-8-8H56a8,8,0,0,0-8,8V64H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8Zm144-8.9c0,35.52-29,64.64-64,64.9a64,64,0,0,1-64-64V56H192ZM232,96a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z"/></svg></div>
+                    <h3>لا توجد نتائج مسجلة بعد</h3>
+                    <p>أكمل اختبارك الأول في نمط التحدي لتسجيل اسمك في لوحة الشرف هنا والتنافس مع أفراد عائلتك وأصدقائك!</p>
+                </div>
+
+                <!-- Full Leaderboard Table -->
+                <div class="leaderboard-table-card" id="leaderboard-table-card">
+                    <div class="leaderboard-table-header">
+                        <span class="col-rank">الترتيب</span>
+                        <span class="col-user">المتسابق</span>
+                        <span class="col-score">النسبة</span>
+                        <span class="col-xp">نقاط XP</span>
+                        <span class="col-category">التصنيف والصعوبة</span>
+                        <span class="col-date">التاريخ</span>
+                    </div>
+                    <div class="leaderboard-rows-container" id="leaderboard-rows-container">
+                        <!-- Rows injected by JS -->
+                    </div>
+                </div>
+
+                <div class="leaderboard-local-note">
+                    <span><svg class="ph-duotone ph-lightbulb icon-gold" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" ><path d="M208,104a79.86,79.86,0,0,1-30.59,62.92A24.29,24.29,0,0,0,168,186v6a8,8,0,0,1-8,8H96a8,8,0,0,1-8-8v-6a24.11,24.11,0,0,0-9.3-19A79.87,79.87,0,0,1,48,104.45C47.76,61.09,82.72,25,126.07,24A80,80,0,0,1,208,104Z" opacity="0.2"/><path d="M176,232a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,232Zm40-128a87.55,87.55,0,0,1-33.64,69.21A16.24,16.24,0,0,0,176,186v6a16,16,0,0,1-16,16H96a16,16,0,0,1-16-16v-6a16,16,0,0,0-6.23-12.66A87.59,87.59,0,0,1,40,104.49C39.74,56.83,78.26,17.14,125.88,16A88,88,0,0,1,216,104Zm-16,0a72,72,0,0,0-73.74-72c-39,.92-70.47,33.39-70.26,72.39a71.65,71.65,0,0,0,27.64,56.3A32,32,0,0,1,96,186v6h64v-6a32.15,32.15,0,0,1,12.47-25.35A71.65,71.65,0,0,0,200,104Zm-16.11-9.34a57.6,57.6,0,0,0-46.56-46.55,8,8,0,0,0-2.66,15.78c16.57,2.79,30.63,16.85,33.44,33.45A8,8,0,0,0,176,104a9,9,0,0,0,1.35-.11A8,8,0,0,0,183.89,94.66Z"/></svg> ملاحظة: لوحة المتصدرين تعمل محلياً على هذا الجهاز وتتيح تنافس عدة ملفات شخصية لأفراد الأسرة والأصدقاء على نفس المتصفح دون الحاجة لإنشاء حساب أو اتصال بالإنترنت.</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section: صدقة جارية وحقوق الإعداد والمشاركة -->
+    <footer class="app-footer" role="contentinfo">
+        <div class="footer-container">
+            <!-- Decorative Islamic Ornament -->
+            <div class="footer-ornament" aria-hidden="true">
+                <svg viewBox="0 0 120 20" width="120" height="20" fill="none">
+                    <path d="M0,10 Q30,0 60,10 Q90,20 120,10" stroke="var(--color-secondary)" stroke-width="1" stroke-dasharray="2,4" opacity="0.6"/>
+                    <circle cx="60" cy="10" r="3" fill="var(--color-secondary)"/>
+                </svg>
+            </div>
+
+            <!-- Sadaqah Jariyah Dedication Card -->
+            <div class="sadaqah-card">
+                <div class="sadaqah-icon" aria-hidden="true"><svg class="ph-duotone ph-plant icon-gold" viewBox="0 0 256 256" width="40" height="40" fill="currentColor" aria-hidden="true" ><path d="M138.54,149.46C106.62,96.25,149.18,43.05,239.63,48.37,245,138.82,191.75,181.39,138.54,149.46ZM16.26,88.26c-3.8,64.61,34.21,95,72.21,72.21C111.27,122.47,80.87,84.46,16.26,88.26Z" opacity="0.2"/><path d="M247.63,47.89a8,8,0,0,0-7.52-7.52c-51.76-3-93.32,12.74-111.18,42.22-11.8,19.48-11.78,43.16-.16,65.74a71.37,71.37,0,0,0-14.17,26.95L98.33,159c7.82-16.33,7.52-33.36-1-47.49C84.09,89.73,53.62,78,15.79,80.27a8,8,0,0,0-7.52,7.52c-2.23,37.83,9.46,68.3,31.25,81.5A45.82,45.82,0,0,0,63.44,176,54.58,54.58,0,0,0,87,170.33l25,25V224a8,8,0,0,0,16,0V194.51a55.61,55.61,0,0,1,12.27-35,73.91,73.91,0,0,0,33.31,8.4,60.9,60.9,0,0,0,31.83-8.86C234.89,141.21,250.67,99.65,247.63,47.89ZM86.06,146.74l-24.41-24.4a8,8,0,0,0-11.31,11.31l24.41,24.41c-9.61,3.18-18.93,2.39-26.94-2.46C32.47,146.31,23.79,124.32,24,96c28.31-.25,50.31,8.47,59.6,23.81C88.45,127.82,89.24,137.14,86.06,146.74Zm111.06-1.36c-13.4,8.11-29.15,8.73-45.15,2l53.69-53.7a8,8,0,0,0-11.31-11.32L140.65,136c-6.76-16-6.15-31.76,2-45.15,13.94-23,47-35.8,89.33-34.83C232.94,98.34,220.14,131.44,197.12,145.38Z"/></svg></div>
+                <div class="sadaqah-text-group">
+                    <h3 class="sadaqah-title">وقفٌ لله تعالى وصدقة جارية</h3>
+                    <p class="sadaqah-desc">
+                        هذا العمل وقفٌ تعليمي لوجه الله تبارك وتعالى، صُمِّم ابتغاء مرضاته ولخدمة العلوم الشرعية وتثبيت معارف القرآن الكريم والسنة النبوية الشريفة. نسأل الله العظيم أن يجعله صدقةً جارية عنّا وعن والدينا وعن جميع المسلمين والمسلمات الأحياء منهم والأموات.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sharing Call to Action -->
+            <div class="share-invitation-box">
+                <div class="hadith-quote">
+                    «الدَّالُّ عَلَى الخَيْرِ كَفَاعِلِهِ»
+                    <span class="hadith-ref">(رواه الإمام مسلم)</span>
+                </div>
+                <p class="share-appeal-text">
+                    أخي الكريم، أختي الكريمة: إذا وصلك هذا التطبيق ووجدت فيه خيراً ونفعاً، فساهم مشكوراً في مشاركته مع أهلك وأصحابك لنشارك جميعاً في الأجر والثواب ونشر العلم النافع؛ فرُبَّ مُبلَّغٍ أوعى من سامع.
+                </p>
+                <div class="share-actions">
+                    <button type="button" class="btn btn-secondary btn-share" id="footer-share-btn">
+                        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                            <path fill="currentColor" d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+                        </svg>
+                        <span>مشاركة التطبيق واحتساب الأجر</span>
+                    </button>
+                    <button type="button" class="btn btn-outline btn-copy" id="footer-copy-link-btn">
+                        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                            <path fill="currentColor" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+                        </svg>
+                        <span id="footer-copy-text">نسخ الرابط</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Copyright and Credits -->
+            <div class="footer-bottom-credits">
+                <div class="credits-developer">
+                    <span>فكرة وإعداد وتطوير:</span>
+                    <strong class="dev-name">محمد كرم (Mohamed Karam)</strong>
+                    <a href="https://api.whatsapp.com/send?phone=201017325592" target="_blank" rel="noopener noreferrer" class="footer-wa-badge" title="تواصل مباشر عبر واتساب مع محمد كرم">
+                        <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        <span>واتساب: 01017325592</span>
+                    </a>
+                    <span class="rights-tag">— صدقة جارية ومتاح لكل مسلم ومسلمة للنشر والتعلم</span>
+                </div>
+                <div class="credits-platform">
+                    <span>منصة مَعارِف | Ma3arf &copy; 2026 — تقبل الله منا ومنكم صالح الأعمال</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="bottom-nav" id="bottom-nav" aria-label="التنقل الرئيسي للهواتف">
+        <button type="button" class="nav-item active" id="nav-home" aria-label="الرئيسية">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>الرئيسية</span>
+        </button>
+        <button type="button" class="nav-item" id="nav-search" aria-label="البحث">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            <span>البحث</span>
+        </button>
+        <button type="button" class="nav-item" id="nav-daily" aria-label="اليومي">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/></svg>
+            <span>اليومي</span>
+        </button>
+        <button type="button" class="nav-item" id="nav-favorites" aria-label="المفضلة">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <span>المفضلة</span>
+        </button>
+        <button type="button" class="nav-item" id="nav-stats-btn" aria-label="الإحصائيات">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+            <span>الإحصائيات</span>
+        </button>
+    </nav>
+
+    <!-- Modal: Statistics and Achievements Center -->
+    <div class="modal-overlay hidden" id="stats-modal" role="dialog" aria-modal="true" aria-labelledby="stats-modal-title">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 class="modal-title" id="stats-modal-title">مركز الإحصائيات والأوسمة العلمية</h3>
+                <button type="button" class="close-modal-btn" id="close-stats-btn-x" aria-label="إغلاق النافذة">&times;</button>
+            </div>
+            
+            <div class="modal-body-scroll">
+                <!-- Statistics Overview Grid -->
+                <div class="stats-overview-grid">
+                    <div class="stat-box">
+                        <span class="stat-box-val" id="stats-total-quizzes">0</span>
+                        <span class="stat-box-lbl">إجمالي الاختبارات المكتملة</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-box-val" id="stats-total-answers">0</span>
+                        <span class="stat-box-lbl">الأسئلة المجاب عليها</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-box-val" id="stats-success-rate">0%</span>
+                        <span class="stat-box-lbl">معدل الإجابات الصحيحة</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-box-val text-gold" id="stats-total-xp">0 XP</span>
+                        <span class="stat-box-lbl">إجمالي نقاط الخبرة</span>
+                    </div>
+                </div>
+
+                <!-- Badges Gallery Section -->
+                <h4 class="modal-sub-title">أوسمة الشرف والإنجاز المعرفي (Achievements)</h4>
+                <p class="modal-desc">كل هدف علمي تحققه يفتح لك وساماً مباركاً تقديراً لسعيك في طلب العلم وتثبيته.</p>
+                
+                <div class="badges-grid" id="modal-badges-grid-container">
+                    <!-- Badges gallery items injected by JS -->
+                </div>
+
+                <!-- Reset Data Warning Area -->
+                <div class="reset-data-container">
+                    <button type="button" class="btn btn-danger btn-sm" id="reset-data-btn">إعادة تهيئة كافة البيانات والإحصائيات</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Confirmation for Data Reset -->
+    <div class="modal-overlay hidden" id="reset-confirm-modal" role="alertdialog" aria-modal="true" aria-labelledby="reset-modal-title">
+        <div class="modal-card reset-modal-card">
+            <div class="reset-warning-icon"><svg class="ph-duotone ph-warning-circle icon-red" viewBox="0 0 256 256" width="48" height="48" fill="currentColor" aria-hidden="true" ><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"/><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"/></svg></div>
+            <h3 id="reset-modal-title">تأكيد إعادة تهيئة البيانات</h3>
+            <p>سيتم مسح جميع الإحصائيات ونقاط الخبرة (XP)، الأوسمة المكتسبة، وقائمة المفضلة وسجل الأسئلة الخاطئة نهائياً.</p>
+            <p class="reset-warning-text"><svg class="ph-duotone ph-warning-circle icon-red" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" ><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"/><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"/></svg> هذا الإجراء لا يمكن التراجع عنه مطلقاً!</p>
+            <div class="reset-modal-actions">
+                <button type="button" class="btn btn-outline" id="reset-cancel-btn">إلغاء الأمر</button>
+                <button type="button" class="btn btn-danger" id="reset-confirm-btn">تأكيد مسح البيانات بالكامل</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Achievement Toast Notification Area -->
+    <div class="achievement-toast hidden" id="achievement-toast" role="alert" aria-live="assertive">
+        <div class="toast-icon"><svg class="ph-duotone ph-trophy icon-gold" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" ><path d="M200,48v63.1c0,39.7-31.75,72.6-71.45,72.9A72,72,0,0,1,56,112V48Z" opacity="0.2"/><path d="M232,64H208V48a8,8,0,0,0-8-8H56a8,8,0,0,0-8,8V64H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8Zm144-8.9c0,35.52-29,64.64-64,64.9a64,64,0,0,1-64-64V56H192ZM232,96a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z"/></svg></div>
+        <div class="toast-content">
+            <span class="toast-alert-title">وسام جديد تم استحقاقه!</span>
+            <strong class="toast-badge-name" id="toast-badge-name">باحث عن العلم</strong>
+            <p class="toast-badge-desc" id="toast-badge-desc">أكملت أول اختبار بنجاح.</p>
+        </div>
+    </div>
+
+    <!-- Modal: Share Result & Friend Challenge -->
+    <div class="modal-overlay hidden" id="share-result-modal" role="dialog" aria-modal="true" aria-labelledby="share-modal-title">
+        <div class="modal-card modal-card-lg">
+            <div class="modal-header">
+                <h3 class="modal-title" id="share-modal-title"><svg class="ph-duotone ph-share-network icon-gold" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true" ><path d="M208,200a32,32,0,1,1-32-32A32,32,0,0,1,208,200ZM176,88a32,32,0,1,0-32-32A32,32,0,0,0,176,88Z" opacity="0.2"/><path d="M176,160a39.89,39.89,0,0,0-28.62,12.09l-46.1-29.63a39.8,39.8,0,0,0,0-28.92l46.1-29.63a40,40,0,1,0-8.66-13.45l-46.1,29.63a40,40,0,1,0,0,55.82l46.1,29.63A40,40,0,1,0,176,160Zm0-128a24,24,0,1,1-24,24A24,24,0,0,1,176,32ZM64,152a24,24,0,1,1,24-24A24,24,0,0,1,64,152Zm112,72a24,24,0,1,1,24-24A24,24,0,0,1,176,224Z"/></svg> مشاركة النتيجة وتحدي صديق</h3>
+                <button type="button" class="close-modal-btn" id="close-share-modal-btn" aria-label="إغلاق النافذة">&times;</button>
+            </div>
+            <div class="modal-body-scroll">
+                <p class="modal-desc">شارك إنجازك المعرفي وتحدا أصدقاءك في خوض نفس الاختبار لتحفيز التعلّم ونشر العلم النافع!</p>
+
+                <!-- Canvas Preview -->
+                <div class="share-canvas-container">
+                    <canvas id="share-card-canvas" width="800" height="800" class="share-card-canvas-preview"></canvas>
+                </div>
+
+                <!-- Formatted Arabic Share Message Preview -->
+                <div class="share-text-box">
+                    <label for="share-text-preview" class="form-label">نص الرسالة ورابط التحدي:</label>
+                    <textarea id="share-text-preview" class="share-textarea" readonly rows="3"></textarea>
+                </div>
+
+                <!-- Actions -->
+                <div class="share-modal-actions-grid">
+                    <button type="button" class="btn btn-primary" id="download-share-card-btn">
+                        <span><svg class="ph-duotone ph-image" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" ><path d="M224,56V178.06l-39.72-39.72a8,8,0,0,0-11.31,0L147.31,164,97.66,114.34a8,8,0,0,0-11.32,0L32,168.69V56a8,8,0,0,1,8-8H216A8,8,0,0,1,224,56Z" opacity="0.2"/><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40Zm0,16V158.75l-26.07-26.06a16,16,0,0,0-22.63,0l-20,20-44-44a16,16,0,0,0-22.62,0L40,149.37V56ZM40,172l52-52,80,80H40Zm176,28H194.63l-36-36,20-20L216,181.38V200ZM144,100a12,12,0,1,1,12,12A12,12,0,0,1,144,100Z"/></svg> تحميل البطاقة كصورة PNG</span>
+                    </button>
+                    <button type="button" class="btn btn-secondary" id="share-whatsapp-btn">
+                        <span><svg class="ph-duotone ph-whatsapp-logo" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" ><path d="M128,32A96,96,0,0,0,44.89,176.07L32.42,213.46a8,8,0,0,0,10.12,10.12l37.39-12.47A96,96,0,1,0,128,32Zm24,152a80,80,0,0,1-80-80,32,32,0,0,1,32-32l16,32-12.32,18.47a48.19,48.19,0,0,0,25.85,25.85L152,136l32,16A32,32,0,0,1,152,184Z" opacity="0.2"/><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.62-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg> مشاركة عبر واتساب</span>
+                    </button>
+                    <button type="button" class="btn btn-outline" id="copy-challenge-btn">
+                        <span><svg class="ph-duotone ph-copy" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" ><path d="M216,40V168H168V88H88V40Z" opacity="0.2"/><path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"/></svg> نسخ رابط التحدي والنص</span>
+                    </button>
+                    <button type="button" class="btn btn-outline" id="web-share-btn">
+                        <span><svg class="ph-duotone ph-device-mobile" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" ><path d="M192,56V200H64V56Z" opacity="0.2"/><path d="M176,16H80A24,24,0,0,0,56,40V216a24,24,0,0,0,24,24h96a24,24,0,0,0,24-24V40A24,24,0,0,0,176,16ZM72,64H184V192H72Zm8-32h96a8,8,0,0,1,8,8v8H72V40A8,8,0,0,1,80,32Zm96,192H80a8,8,0,0,1-8-8v-8H184v8A8,8,0,0,1,176,224Z"/></svg> مشاركة عبر التطبيقات</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: In-Quiz Comprehensive Review -->
+    <div class="modal-overlay hidden" id="quiz-review-modal" role="dialog" aria-modal="true" aria-labelledby="review-modal-title">
+        <div class="modal-card modal-card-lg">
+            <div class="modal-header">
+                <h3 class="modal-title" id="review-modal-title"><svg class="ph-duotone ph-copy icon-gold" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true" ><path d="M216,40V168H168V88H88V40Z" opacity="0.2"/><path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"/></svg> مراجعة الإجابات قبل التسليم النهائي</h3>
+                <button type="button" class="close-modal-btn" id="close-review-modal-btn" aria-label="إغلاق النافذة">&times;</button>
+            </div>
+            <div class="modal-body-scroll">
+                <div class="review-status-summary-bar">
+                    <div class="rev-stat">
+                        <span>تمت الإجابة:</span>
+                        <strong class="text-green" id="review-answered-count">0</strong>
+                    </div>
+                    <div class="rev-stat">
+                        <span>لم يُجب عليها بعد:</span>
+                        <strong class="text-gold" id="review-unanswered-count">0</strong>
+                    </div>
+                    <div class="rev-stat">
+                        <span>إجمالي الأسئلة:</span>
+                        <strong id="review-total-count">0</strong>
+                    </div>
+                </div>
+
+                <p class="modal-desc">يمكنك النقر على أي سؤال للانتقال إليه مباشرة وتغيير إجابتك أو الإجابة عليه قبل تسليم النتيجة النهائية.</p>
+
+                <div class="quiz-review-items-list" id="quiz-review-items-container">
+                    <!-- Review items injected by JS -->
+                </div>
+
+                <div class="review-modal-actions">
+                    <button type="button" class="btn btn-outline" id="review-back-to-quiz-btn"><span>العودة لمتابعة الحل</span> <svg class="ph-duotone ph-pencil-simple-line" viewBox="0 0 256 256" width="15" height="15" fill="currentColor" aria-hidden="true" ><path d="M221.66,90.34,192,120,136,64l29.66-29.66a8,8,0,0,1,11.31,0L221.66,79A8,8,0,0,1,221.66,90.34Z" opacity="0.2"/><path d="M227.32,73.37,182.63,28.69a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H216a8,8,0,0,0,0-16H115.32l112-112A16,16,0,0,0,227.32,73.37ZM48,163.31l88-88L180.69,120l-88,88H48Zm144-54.62L147.32,64l24-24L216,84.69Z"/></svg></button>
+                    <button type="button" class="btn btn-primary pulse-glow" id="review-finalize-quiz-btn"><span>تسليم الاختبار نهائياً</span> <svg class="ph-duotone ph-check-circle" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" ><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"/><path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/></svg></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Suggest Question & Report Issue -->
+    <div class="modal-overlay hidden" id="feedback-modal" role="dialog" aria-modal="true" aria-labelledby="feedback-modal-title">
+        <div class="modal-card modal-card-lg">
+            <div class="modal-header">
+                <h3 class="modal-title" id="feedback-modal-title"><svg class="ph-duotone ph-pencil-simple-line icon-gold" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true" ><path d="M221.66,90.34,192,120,136,64l29.66-29.66a8,8,0,0,1,11.31,0L221.66,79A8,8,0,0,1,221.66,90.34Z" opacity="0.2"/><path d="M227.32,73.37,182.63,28.69a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H216a8,8,0,0,0,0-16H115.32l112-112A16,16,0,0,0,227.32,73.37ZM48,163.31l88-88L180.69,120l-88,88H48Zm144-54.62L147.32,64l24-24L216,84.69Z"/></svg> اقتراح سؤال أو إبلاغ عن ملاحظة</h3>
+                <button type="button" class="close-modal-btn" id="close-feedback-modal-btn" aria-label="إغلاق النافذة">&times;</button>
+            </div>
+            <div class="modal-body-scroll">
+                <!-- Navigation Tabs -->
+                <div class="feedback-tabs-nav">
+                    <button type="button" class="feedback-tab-btn active" id="tab-suggest-btn"><span>اقتراح سؤال جديد</span> <svg class="ph-duotone ph-plant" viewBox="0 0 256 256" width="15" height="15" fill="currentColor" aria-hidden="true" ><path d="M138.54,149.46C106.62,96.25,149.18,43.05,239.63,48.37,245,138.82,191.75,181.39,138.54,149.46ZM16.26,88.26c-3.8,64.61,34.21,95,72.21,72.21C111.27,122.47,80.87,84.46,16.26,88.26Z" opacity="0.2"/><path d="M247.63,47.89a8,8,0,0,0-7.52-7.52c-51.76-3-93.32,12.74-111.18,42.22-11.8,19.48-11.78,43.16-.16,65.74a71.37,71.37,0,0,0-14.17,26.95L98.33,159c7.82-16.33,7.52-33.36-1-47.49C84.09,89.73,53.62,78,15.79,80.27a8,8,0,0,0-7.52,7.52c-2.23,37.83,9.46,68.3,31.25,81.5A45.82,45.82,0,0,0,63.44,176,54.58,54.58,0,0,0,87,170.33l25,25V224a8,8,0,0,0,16,0V194.51a55.61,55.61,0,0,1,12.27-35,73.91,73.91,0,0,0,33.31,8.4,60.9,60.9,0,0,0,31.83-8.86C234.89,141.21,250.67,99.65,247.63,47.89ZM86.06,146.74l-24.41-24.4a8,8,0,0,0-11.31,11.31l24.41,24.41c-9.61,3.18-18.93,2.39-26.94-2.46C32.47,146.31,23.79,124.32,24,96c28.31-.25,50.31,8.47,59.6,23.81C88.45,127.82,89.24,137.14,86.06,146.74Zm111.06-1.36c-13.4,8.11-29.15,8.73-45.15,2l53.69-53.7a8,8,0,0,0-11.31-11.32L140.65,136c-6.76-16-6.15-31.76,2-45.15,13.94-23,47-35.8,89.33-34.83C232.94,98.34,220.14,131.44,197.12,145.38Z"/></svg></button>
+                    <button type="button" class="feedback-tab-btn" id="tab-report-btn"><span>إبلاغ عن ملاحظة أو خطأ</span> <svg class="ph-duotone ph-warning-circle" viewBox="0 0 256 256" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"/><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm-8-80V80a8,8,0,0,1,16,0v56a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,172Z"/></svg></button>
+                </div>
+
+                <!-- Tab 1: Suggest Question -->
+                <div class="feedback-tab-pane active" id="tab-suggest-pane">
+                    <p class="modal-desc">ساهم في إثراء بنك الأسئلة باقتراح سؤال إسلامي موثق. جميع المقترحات تُحفظ كمسودات محلية على جهازك ويمكنك إرسالها إلينا.</p>
+                    <form id="suggest-question-form" onsubmit="return false;">
+                        <div class="form-group">
+                            <label for="suggest-q-text" class="form-label">نص السؤال *</label>
+                            <textarea id="suggest-q-text" class="form-control" rows="2" placeholder="اكتب صيغة السؤال واضحة لا لبس فيها..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">الخيارات الأربعة (حدد الإجابة الصحيحة بالدائرة) *</label>
+                            <div class="suggest-options-group">
+                                <div class="suggest-opt-row">
+                                    <input type="radio" name="suggest-correct" id="suggest-rad-0" value="0" checked>
+                                    <span class="opt-indicator">أ</span>
+                                    <input type="text" id="suggest-opt-0" class="form-control" placeholder="الخيار الأول (الصحيح)" required>
+                                </div>
+                                <div class="suggest-opt-row">
+                                    <input type="radio" name="suggest-correct" id="suggest-rad-1" value="1">
+                                    <span class="opt-indicator">ب</span>
+                                    <input type="text" id="suggest-opt-1" class="form-control" placeholder="الخيار الثاني" required>
+                                </div>
+                                <div class="suggest-opt-row">
+                                    <input type="radio" name="suggest-correct" id="suggest-rad-2" value="2">
+                                    <span class="opt-indicator">ج</span>
+                                    <input type="text" id="suggest-opt-2" class="form-control" placeholder="الخيار الثالث" required>
+                                </div>
+                                <div class="suggest-opt-row">
+                                    <input type="radio" name="suggest-correct" id="suggest-rad-3" value="3">
+                                    <span class="opt-indicator">د</span>
+                                    <input type="text" id="suggest-opt-3" class="form-control" placeholder="الخيار الرابع" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="suggest-category" class="form-label">التصنيف *</label>
+                                <select id="suggest-category" class="form-control">
+                                    <option value="القرآن الكريم">القرآن الكريم</option>
+                                    <option value="الحديث الشريف">الحديث الشريف</option>
+                                    <option value="السيرة النبوية">السيرة النبوية</option>
+                                    <option value="قصص الأنبياء">قصص الأنبياء</option>
+                                    <option value="الصحابة">الصحابة</option>
+                                    <option value="العقيدة">العقيدة</option>
+                                    <option value="الفقه">الفقه</option>
+                                    <option value="الأخلاق الإسلامية">الأخلاق الإسلامية</option>
+                                    <option value="العبادات">العبادات</option>
+                                    <option value="معلومات إسلامية عامة">التاريخ والمعلومات العامة</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="suggest-difficulty" class="form-label">المستوى المقترح *</label>
+                                <select id="suggest-difficulty" class="form-control">
+                                    <option value="easy">المبتدئ</option>
+                                    <option value="medium" selected>المتوسط</option>
+                                    <option value="hard">المتقدم</option>
+                                    <option value="expert">الخبير</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="suggest-explanation" class="form-label">الشرح والبيان التوضيحي *</label>
+                            <textarea id="suggest-explanation" class="form-control" rows="2" placeholder="بيان وجه الصواب وتفصيل المسألة..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="suggest-source" class="form-label">المصدر والتوثيق الشرعي المعتمد *</label>
+                            <input type="text" id="suggest-source" class="form-control" placeholder="مثال: سورة الكهف آية 10 / صحيح البخاري حديث رقم 1234 / البداية والنهاية ج1" required>
+                        </div>
+
+                        <div class="feedback-actions">
+                            <button type="button" class="btn btn-primary" id="save-suggest-btn"><span>حفظ في المسودات المحلية</span> <svg class="ph-duotone ph-floppy-disk" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" ><path d="M216,83.31V208a8,8,0,0,1-8,8H176V152a8,8,0,0,0-8-8H88a8,8,0,0,0-8,8v64H48a8,8,0,0,1-8-8V48a8,8,0,0,1,8-8H172.69a8,8,0,0,1,5.65,2.34l35.32,35.32A8,8,0,0,1,216,83.31Z" opacity="0.2"/><path d="M219.31,72,184,36.69A15.86,15.86,0,0,0,172.69,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V83.31A15.86,15.86,0,0,0,219.31,72ZM168,208H88V152h80Zm40,0H184V152a16,16,0,0,0-16-16H88a16,16,0,0,0-16,16v56H48V48H172.69L208,83.31ZM160,72a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h56A8,8,0,0,1,160,72Z"/></svg></button>
+                            <button type="button" class="btn btn-secondary btn-whatsapp-action" id="whatsapp-suggest-btn" title="إرسال السؤال مباشرة عبر واتساب إلى: 01017325592">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                                <span>إرسال الاقتراح عبر واتساب</span> <svg class="ph-duotone ph-whatsapp-logo" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" ><path d="M128,32A96,96,0,0,0,44.89,176.07L32.42,213.46a8,8,0,0,0,10.12,10.12l37.39-12.47A96,96,0,1,0,128,32Zm24,152a80,80,0,0,1-80-80,32,32,0,0,1,32-32l16,32-12.32,18.47a48.19,48.19,0,0,0,25.85,25.85L152,136l32,16A32,32,0,0,1,152,184Z" opacity="0.2"/><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.62-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg>
+                            </button>
+                            <button type="button" class="btn btn-outline" id="copy-suggest-btn"><span>نسخ نص الاقتراح</span> <svg class="ph-duotone ph-copy" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" ><path d="M216,40V168H168V88H88V40Z" opacity="0.2"/><path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"/></svg></button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Tab 2: Report Issue -->
+                <div class="feedback-tab-pane hidden" id="tab-report-pane">
+                    <p class="modal-desc">إذا لاحظت خطأً في صياغة سؤال، أو اشتباهاً في الإجابة، أو نقصاً في التوثيق؛ فنرجو إبلاغنا لتدارك الأمر فوراً.</p>
+                    <form id="report-issue-form" onsubmit="return false;">
+                        <div class="form-group">
+                            <label for="report-issue-type" class="form-label">نوع الملاحظة *</label>
+                            <select id="report-issue-type" class="form-control">
+                                <option value="answer_dispute">خطأ في الإجابة الصحيحة المحددة</option>
+                                <option value="question_text">خطأ أو لبس في صياغة السؤال</option>
+                                <option value="typo">خطأ لغوي أو نحوي أو إملائي</option>
+                                <option value="source_error">خطأ أو نقص في توثيق المصدر الشرعي</option>
+                                <option value="enhancement">اقتراح تحسين أو فائدة إضافية</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="report-question-target" class="form-label">معرف السؤال أو نصه *</label>
+                            <input type="text" id="report-question-target" class="form-control" placeholder="معرف أو نص السؤال المعني..." required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="report-description" class="form-label">تفاصيل الملاحظة ومقترح التصحيح *</label>
+                            <textarea id="report-description" class="form-control" rows="3" placeholder="اشرح الملاحظة بدقة مع ذكر المرجع المصحح إن وجد..." required></textarea>
+                        </div>
+
+                        <div class="feedback-actions">
+                            <button type="button" class="btn btn-primary" id="save-report-btn"><span>حفظ البلاغ محلياً</span> <svg class="ph-duotone ph-floppy-disk" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" ><path d="M216,83.31V208a8,8,0,0,1-8,8H176V152a8,8,0,0,0-8-8H88a8,8,0,0,0-8,8v64H48a8,8,0,0,1-8-8V48a8,8,0,0,1,8-8H172.69a8,8,0,0,1,5.65,2.34l35.32,35.32A8,8,0,0,1,216,83.31Z" opacity="0.2"/><path d="M219.31,72,184,36.69A15.86,15.86,0,0,0,172.69,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V83.31A15.86,15.86,0,0,0,219.31,72ZM168,208H88V152h80Zm40,0H184V152a16,16,0,0,0-16-16H88a16,16,0,0,0-16,16v56H48V48H172.69L208,83.31ZM160,72a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h56A8,8,0,0,1,160,72Z"/></svg></button>
+                            <button type="button" class="btn btn-secondary btn-whatsapp-action" id="whatsapp-report-btn" title="إرسال البلاغ مباشرة عبر واتساب إلى: 01017325592">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                                <span>إرسال البلاغ عبر واتساب</span> <svg class="ph-duotone ph-whatsapp-logo" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" ><path d="M128,32A96,96,0,0,0,44.89,176.07L32.42,213.46a8,8,0,0,0,10.12,10.12l37.39-12.47A96,96,0,1,0,128,32Zm24,152a80,80,0,0,1-80-80,32,32,0,0,1,32-32l16,32-12.32,18.47a48.19,48.19,0,0,0,25.85,25.85L152,136l32,16A32,32,0,0,1,152,184Z" opacity="0.2"/><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.62-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg>
+                            </button>
+                            <button type="button" class="btn btn-outline" id="copy-report-btn"><span>نسخ نص البلاغ</span> <svg class="ph-duotone ph-copy" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" ><path d="M216,40V168H168V88H88V40Z" opacity="0.2"/><path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"/></svg></button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Direct WhatsApp Contact Box with Mohamed Karam -->
+                <div class="developer-wa-contact-box">
+                    <div class="wa-contact-icon" aria-hidden="true"><svg class="ph-duotone ph-whatsapp-logo icon-green" viewBox="0 0 256 256" width="24" height="24" fill="currentColor" aria-hidden="true" ><path d="M128,32A96,96,0,0,0,44.89,176.07L32.42,213.46a8,8,0,0,0,10.12,10.12l37.39-12.47A96,96,0,1,0,128,32Zm24,152a80,80,0,0,1-80-80,32,32,0,0,1,32-32l16,32-12.32,18.47a48.19,48.19,0,0,0,25.85,25.85L152,136l32,16A32,32,0,0,1,152,184Z" opacity="0.2"/><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.62-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></svg></div>
+                    <div class="wa-contact-details">
+                        <span class="wa-contact-title">تواصل مباشر مع مطوّر المنصة (محمد كرم):</span>
+                        <span class="wa-contact-sub">لإرسال استفسار أو مقترح سريع عبر تطبيق واتساب مباشرة</span>
+                    </div>
+                    <a href="https://api.whatsapp.com/send?phone=201017325592&text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D9%8A%D8%A7%20%D8%A3%D8%B3%D8%AA%D8%A7%D8%B0%20%D9%85%D8%AD%D9%85%D8%AF%20%D9%83%D8%B1%D9%85%D8%8C%20%D8%A3%D8%AA%D9%88%D8%A7%D8%B5%D9%84%20%D9%85%D8%B9%D9%83%20%D8%A8%D8%AE%D8%B5%D9%88%D8%B8%20%D9%85%D9%86%D8%B5%D8%A9%20%D9%85%D9%8E%D8%B9%D8%A7%D8%B1%D9%90%D9%81" target="_blank" rel="noopener noreferrer" class="wa-contact-link-pill" title="محادثة واتساب مباشرة مع محمد كرم">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                        <span>واتساب: 01017325592</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Verified Islamic Source Inspector -->
+    <div class="modal-overlay hidden" id="source-details-modal" role="dialog" aria-modal="true" aria-labelledby="source-modal-title">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 class="modal-title" id="source-modal-title"><svg class="ph-duotone ph-book-bookmark icon-gold" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true" ><path d="M208,32V192H72a24,24,0,0,0-24,24V56A24,24,0,0,1,72,32h40v96l32-24,32,24V32Z" opacity="0.2"/><path d="M208,24H72A32,32,0,0,0,40,56V224a8,8,0,0,0,8,8H192a8,8,0,0,0,0-16H56a16,16,0,0,1,16-16H208a8,8,0,0,0,8-8V32A8,8,0,0,0,208,24ZM120,40h48v72L148.79,97.6a8,8,0,0,0-9.6,0L120,112Zm80,144H72a31.82,31.82,0,0,0-16,4.29V56A16,16,0,0,1,72,40h32v88a8,8,0,0,0,12.8,6.4L144,114l27.21,20.4A8,8,0,0,0,176,136a8.1,8.1,0,0,0,3.58-.84A8,8,0,0,0,184,128V40h16Z"/></svg> المصدر والتوثيق الشرعي المعتمد</h3>
+                <button type="button" class="close-modal-btn" id="close-source-modal-btn" aria-label="إغلاق النافذة">&times;</button>
+            </div>
+            <div class="modal-body-scroll">
+                <div class="source-verification-badge">
+                    <span class="badge-icon"><svg class="ph-duotone ph-seal-check icon-green" viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true" ><path d="M232,128c0,12.51-17.82,21.95-22.68,33.69-4.68,11.32,1.42,30.65-7.78,39.85s-28.53,3.1-39.85,7.78C150,214.18,140.5,232,128,232s-22-17.82-33.69-22.68c-11.32-4.68-30.65,1.42-39.85-7.78s-3.1-28.53-7.78-39.85C41.82,150,24,140.5,24,128s17.82-22,22.68-33.69C51.36,83,45.26,63.66,54.46,54.46S83,51.36,94.31,46.68C106.05,41.82,115.5,24,128,24S150,41.82,161.69,46.68c11.32,4.68,30.65-1.42,39.85,7.78s3.1,28.53,7.78,39.85C214.18,106.05,232,115.5,232,128Z" opacity="0.2"/><path d="M225.86,102.82c-3.77-3.94-7.67-8-9.14-11.57-1.36-3.27-1.44-8.69-1.52-13.94-.15-9.76-.31-20.82-8-28.51s-18.75-7.85-28.51-8c-5.25-.08-10.67-.16-13.94-1.52-3.56-1.47-7.63-5.37-11.57-9.14C146.28,23.51,138.44,16,128,16s-18.27,7.51-25.18,14.14c-3.94,3.77-8,7.67-11.57,9.14C88,40.64,82.56,40.72,77.31,40.8c-9.76.15-20.82.31-28.51,8S41,67.55,40.8,77.31c-.08,5.25-.16,10.67-1.52,13.94-1.47,3.56-5.37,7.63-9.14,11.57C23.51,109.72,16,117.56,16,128s7.51,18.27,14.14,25.18c3.77,3.94,7.67,8,9.14,11.57,1.36,3.27,1.44,8.69,1.52,13.94.15,9.76.31,20.82,8,28.51s18.75,7.85,28.51,8c5.25.08,10.67.16,13.94,1.52,3.56,1.47,7.63,5.37,11.57,9.14C109.72,232.49,117.56,240,128,240s18.27-7.51,25.18-14.14c3.94-3.77,8-7.67,11.57-9.14,3.27-1.36,8.69-1.44,13.94-1.52,9.76-.15,20.82-.31,28.51-8s7.85-18.75,8-28.51c.08-5.25.16-10.67,1.52-13.94,1.47-3.56,5.37-7.63,9.14-11.57C232.49,146.28,240,138.44,240,128S232.49,109.73,225.86,102.82Zm-11.55,39.29c-4.79,5-9.75,10.17-12.38,16.52-2.52,6.1-2.63,13.07-2.73,19.82-.1,7-.21,14.33-3.32,17.43s-10.39,3.22-17.43,3.32c-6.75.1-13.72.21-19.82,2.73-6.35,2.63-11.52,7.59-16.52,12.38S132,224,128,224s-9.15-4.92-14.11-9.69-10.17-9.75-16.52-12.38c-6.1-2.52-13.07-2.63-19.82-2.73-7-.1-14.33-.21-17.43-3.32s-3.22-10.39-3.32-17.43c-.1-6.75-.21-13.72-2.73-19.82-2.63-6.35-7.59-11.52-12.38-16.52S32,132,32,128s4.92-9.15,9.69-14.11,9.75-10.17,12.38-16.52c2.52-6.1,2.63-13.07,2.73-19.82.1-7,.21-14.33,3.32-17.43S70.51,56.9,77.55,56.8c6.75-.1,13.72-.21,19.82-2.73,6.35-2.63,11.52-7.59,16.52-12.38S124,32,128,32s9.15,4.92,14.11,9.69,10.17,9.75,16.52,12.38c6.1,2.52,13.07,2.63,19.82,2.73,7,.1,14.33.21,17.43,3.32s3.22,10.39,3.32,17.43c.1,6.75.21,13.72,2.73,19.82,2.63,6.35,7.59,11.52,12.38,16.52S224,124,224,128,219.08,137.15,214.31,142.11ZM173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34Z"/></svg></span>
+                    <span>معلومة موثقة ومراجعة بدقة وفق المصادر الأصيلة</span>
+                </div>
+
+                <div class="source-card-main">
+                    <div class="source-q-preview">
+                        <span class="source-lbl">السؤال:</span>
+                        <h4 id="source-details-q-text">نص السؤال</h4>
+                    </div>
+
+                    <div class="source-answer-preview">
+                        <span class="source-lbl">الإجابة الصحيحة المعتمدة:</span>
+                        <strong class="text-green" id="source-details-correct-ans">الإجابة</strong>
+                    </div>
+
+                    <div class="source-meta-row">
+                        <span class="meta-pill" id="source-details-category">القرآن الكريم</span>
+                        <span class="meta-pill" id="source-details-difficulty">المتوسط</span>
+                        <span class="meta-pill text-gold" id="source-details-type">القرآن الكريم</span>
+                    </div>
+
+                    <div class="source-reference-box">
+                        <span class="source-lbl">المرجع ورقم الآية / الحديث:</span>
+                        <div class="ref-quote" id="source-details-reference">سورة البقرة: 255</div>
+                    </div>
+
+                    <div class="source-explanation-box">
+                        <span class="source-lbl">التفسير والشرح التوضيحي:</span>
+                        <p id="source-details-explanation">شرح تفصيلي للمسألة.</p>
+                    </div>
+                </div>
+
+                <div class="source-modal-actions">
+                    <button type="button" class="btn btn-secondary" id="copy-source-details-btn">
+                        <span><svg class="ph-duotone ph-copy" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" ><path d="M216,40V168H168V88H88V40Z" opacity="0.2"/><path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"/></svg> نسخ التوثيق الشرعي الكامل</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Local Profiles Management -->
+    <div class="modal-overlay hidden" id="profile-modal" role="dialog" aria-modal="true" aria-labelledby="profile-modal-title">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 class="modal-title" id="profile-modal-title"><svg class="ph-duotone ph-users icon-gold" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true" ><path d="M136,108A52,52,0,1,1,84,56,52,52,0,0,1,136,108Z" opacity="0.2"/><path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"/></svg> إدارة الملفات الشخصية على الجهاز</h3>
+                <button type="button" class="close-modal-btn" id="close-profile-modal-btn" aria-label="إغلاق النافذة">&times;</button>
+            </div>
+            <div class="modal-body-scroll">
+                <p class="modal-desc">يمكن لكل فرد من أفراد العائلة أو الأصدقاء إنشاء ملف شخصي منفصل لتسجيل نقاطه وإنجازاته والتنافس على لوحة المتصدرين.</p>
+
+                <!-- Current Profiles List -->
+                <h4 class="modal-sub-title">الملفات الحالية المسجلة:</h4>
+                <div class="profiles-list-group" id="profiles-list-container">
+                    <!-- Profile items injected by JS -->
+                </div>
+
+                <!-- Create New Profile Form -->
+                <div class="create-profile-box">
+                    <h4 class="modal-sub-title">إضافة ملف شخصي جديد:</h4>
+                    <div class="input-with-btn">
+                        <input type="text" id="new-profile-name-input" class="form-control" placeholder="اسم المتسابق (مثال: أحمد، فاطمة، عبد الله...)" maxlength="25">
+                        <button type="button" class="btn btn-primary" id="create-profile-btn"><span>إنشاء</span> <svg class="ph-duotone ph-plus-circle" viewBox="0 0 256 256" width="16" height="16" fill="currentColor" aria-hidden="true" ><path d="M224,128a96,96,0,1,1-96-96A96,96,0,0,1,224,128Z" opacity="0.2"/><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H136v32a8,8,0,0,1-16,0V136H88a8,8,0,0,1,0-16h32V88a8,8,0,0,1,16,0v32h32A8,8,0,0,1,176,128Z"/></svg></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Incoming Friend Challenge Invitation -->
+    <div class="modal-overlay hidden" id="challenge-welcome-modal" role="dialog" aria-modal="true" aria-labelledby="challenge-modal-title">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3 class="modal-title" id="challenge-modal-title"><svg class="ph-duotone ph-trophy icon-gold" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true" ><path d="M200,48v63.1c0,39.7-31.75,72.6-71.45,72.9A72,72,0,0,1,56,112V48Z" opacity="0.2"/><path d="M232,64H208V48a8,8,0,0,0-8-8H56a8,8,0,0,0-8,8V64H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8Zm144-8.9c0,35.52-29,64.64-64,64.9a64,64,0,0,1-64-64V56H192ZM232,96a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z"/></svg> وصلك تحدٍّ إسلامي جديد!</h3>
+                <button type="button" class="close-modal-btn" id="close-challenge-modal-btn" aria-label="إغلاق النافذة">&times;</button>
+            </div>
+            <div class="modal-body-scroll text-center">
+                <div class="challenge-hero-icon"><svg class="ph-duotone ph-shield-check icon-gold" viewBox="0 0 256 256" width="48" height="48" fill="currentColor" aria-hidden="true" ><path d="M216,56v56c0,96-88,120-88,120S40,208,40,112V56a8,8,0,0,1,8-8H208A8,8,0,0,1,216,56Z" opacity="0.2"/><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm0,72c0,37.07-13.66,67.16-40.6,89.42A129.3,129.3,0,0,1,128,223.62a128.25,128.25,0,0,1-38.92-21.81C61.82,179.51,48,149.3,48,112l0-56,160,0ZM82.34,141.66a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32l-56,56a8,8,0,0,1-11.32,0Z"/></svg></div>
+                <h4 class="challenge-lead-text">
+                    تحداك <strong class="text-gold" id="challenge-inviter-name">صديق</strong> في منصة مَعارِف!
+                </h4>
+                <p class="challenge-sub-text">هل أنت مستعد لاختبار معلوماتك وإثبات جدارتك المعرفية في هذا التحدي؟</p>
+
+                <!-- Challenge Details Card -->
+                <div class="challenge-specs-card">
+                    <div class="spec-row">
+                        <span>نوع الاختبار:</span>
+                        <strong id="challenge-spec-mode">حسب التصنيف</strong>
+                    </div>
+                    <div class="spec-row">
+                        <span>المجال / الصعوبة:</span>
+                        <strong class="text-gold" id="challenge-spec-target">القرآن الكريم</strong>
+                    </div>
+                    <div class="spec-row">
+                        <span>عدد الأسئلة:</span>
+                        <strong id="challenge-spec-count">10 أسئلة</strong>
+                    </div>
+                    <div class="spec-row">
+                        <span>النمط الزمني:</span>
+                        <strong id="challenge-spec-qmode">تحدي زمني</strong>
+                    </div>
+                </div>
+
+                <div class="challenge-modal-actions">
+                    <button type="button" class="btn btn-primary btn-lg pulse-glow" id="accept-challenge-btn">
+                        <span>قبول التحدي وبدء الاختبار الآن</span> <svg class="ph-duotone ph-rocket-launch" viewBox="0 0 256 256" width="18" height="18" fill="currentColor" aria-hidden="true" ><path d="M184,120v61.65a8,8,0,0,1-2.34,5.65l-34.35,34.35a8,8,0,0,1-13.57-4.53L128,176ZM136,72H74.35a8,8,0,0,0-5.65,2.34L34.35,108.69a8,8,0,0,0,4.53,13.57L80,128ZM40,216c37.65,0,50.69-19.69,54.56-28.18L68.18,161.44C59.69,165.31,40,178.35,40,216Z" opacity="0.2"/><path d="M223.85,47.12a16,16,0,0,0-15-15c-12.58-.75-44.73.4-71.41,27.07L132.69,64H74.36A15.91,15.91,0,0,0,63,68.68L28.7,103a16,16,0,0,0,9.07,27.16l38.47,5.37,44.21,44.21,5.37,38.49a15.94,15.94,0,0,0,10.78,12.92,16.11,16.11,0,0,0,5.1.83A15.91,15.91,0,0,0,153,227.3L187.32,193A15.91,15.91,0,0,0,192,181.64V123.31l4.77-4.77C223.45,91.86,224.6,59.71,223.85,47.12ZM74.36,80h42.33L77.16,119.52,40,114.34Zm74.41-9.45a76.65,76.65,0,0,1,59.11-22.47,76.46,76.46,0,0,1-22.42,59.16L128,164.68,91.32,128ZM176,181.64,141.67,216l-5.19-37.17L176,139.31Zm-74.16,9.5C97.34,201,82.29,224,40,224a8,8,0,0,1-8-8c0-42.29,23-57.34,32.86-61.85a8,8,0,0,1,6.64,14.56c-6.43,2.93-20.62,12.36-23.12,38.91,26.55-2.5,36-16.69,38.91-23.12a8,8,0,1,1,14.56,6.64Z"/></svg>
+                    </button>
+                    <button type="button" class="btn btn-outline" id="decline-challenge-btn">
+                        <span>تصفح المنصة بشكل عادي</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confetti Canvas Container -->
+    <div class="confetti-container" id="confetti-container" aria-hidden="true"></div>
+
+    <!-- Main Game Script -->
+    <script src="script.js"></script>
+</body>
+</html>
