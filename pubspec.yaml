@@ -14,7 +14,7 @@ dependencies:
   url_launcher: ^6.3.1
   share_plus: ^13.3.1
   path_provider: ^2.1.6
-  phosphor_flutter: ^2.1.0
+  phosphor_icons: ^3.0.1
   font_awesome_flutter: ^11.0.0
   audioplayers: ^6.7.1
 

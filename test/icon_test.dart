@@ -3,7 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:ma3arf/core/theme/app_icons.dart';
 import 'package:ma3arf/core/theme/app_theme.dart';
 import 'package:ma3arf/core/widgets/app_icon.dart';
-import 'package:phosphor_flutter/phosphor_flutter.dart';
+import 'package:phosphor_icons/phosphor_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {

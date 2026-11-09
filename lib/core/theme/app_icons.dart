@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:phosphor_flutter/phosphor_flutter.dart';
+import 'package:phosphor_icons/phosphor_icons.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 /// Centralized sizing tokens for icons throughout Ma3arf

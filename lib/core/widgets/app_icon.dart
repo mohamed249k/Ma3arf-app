@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:phosphor_flutter/phosphor_flutter.dart';
+import 'package:phosphor_icons/phosphor_icons.dart';
 import 'package:ma3arf/core/theme/app_icons.dart';
 import 'package:ma3arf/core/theme/app_theme.dart';
 
@@ -38,9 +38,9 @@ class AppIcon extends StatelessWidget {
 
     Widget renderedIcon;
 
-    if (icon is PhosphorIconData) {
+    if (icon.fontPackage == 'phosphor_icons') {
       renderedIcon = PhosphorIcon(
-        icon as PhosphorIconData,
+        icon,
         size: effectiveSize,
         color: effectiveColor,
         duotoneSecondaryOpacity: duotoneSecondaryOpacity,
